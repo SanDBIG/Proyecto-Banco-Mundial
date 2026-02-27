@@ -5,3 +5,4 @@ Clean data - Limpieza de datos
 Select - Selección de variables
 Output - Data limpia y organizada
 Visuals - Visualizaciones
+Delete - Borrar archivos (explicar por qué)
