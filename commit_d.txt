@@ -1,0 +1,7 @@
+Libraries - Librerias y versiones
+Input - Carga de datos
+EDA - Estadisticos básicos
+Clean data - Limpieza de datos
+Select - Selección de variables
+Output - Data limpia y organizada
+Visuals - Visualizaciones
