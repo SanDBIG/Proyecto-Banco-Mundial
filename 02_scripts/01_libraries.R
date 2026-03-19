@@ -15,5 +15,11 @@ pacman::p_load(
   data.table,  # Manipulación rápida de grandes datasets
   scales,      # Escalas para gráficos
   patchwork,   # Combinar gráficos ggplot
-  ggthemes     # Temas adicionales para gráficos
+  ggthemes,     # Temas adicionales para gráficos
+  renv         # libreria que documenta versiones de librerias 
 )
+
+
+# 2. DOCUMENTACION LIBRERIAS ----------------------------------------------
+
+renv::init()
