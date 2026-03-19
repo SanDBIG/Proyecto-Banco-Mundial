@@ -17,5 +17,3 @@ pacman::p_load(
   patchwork,   # Combinar gráficos ggplot
   ggthemes     # Temas adicionales para gráficos
 )
-
-

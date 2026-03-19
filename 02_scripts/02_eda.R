@@ -13,6 +13,7 @@ str(data_raw)
 summary(data_raw)
 dim(data_raw)
 names(data_raw)
+unique(data_raw["Country Name"])
 
 # 2 filtrar Chile
 chile <- data_raw %>%

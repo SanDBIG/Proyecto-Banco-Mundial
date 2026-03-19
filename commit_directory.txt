@@ -3,6 +3,7 @@ Input - Carga de datos
 EDA - Estadisticos básicos
 Clean data - Limpieza de datos
 Select - Selección de variables
+Wrangling - manejo de data
 Output - Data limpia y organizada
 Visuals - Visualizaciones
 Delete - Borrar archivos (explicar por qué)
