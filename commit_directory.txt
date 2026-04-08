@@ -1,9 +1,9 @@
-Libraries - Librerias y versiones
 Input - Carga de datos
-EDA - Estadisticos básicos
+Libraries - Librerias y versiones
+Wrangling - manejo de data
 Clean data - Limpieza de datos
 Select - Selección de variables
-Wrangling - manejo de data
-Output - Data limpia y organizada
+EDA - Estadisticos básicos
 Visuals - Visualizaciones
+Output - Data limpia y organizada
 Delete - Borrar archivos (explicar por qué)
