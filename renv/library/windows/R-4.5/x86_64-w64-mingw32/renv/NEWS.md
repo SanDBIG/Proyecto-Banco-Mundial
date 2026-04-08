@@ -1,4 +1,188 @@
 
+# renv 1.2.0
+
+* `renv::install()` and `renv::restore()` now download and install packages
+  in parallel. Package downloads are batched into a single `curl --parallel`
+  invocation, and source packages are compiled concurrently (up to
+  `install.jobs` workers, default 4) using ready-queue scheduling that
+  launches each package as soon as its dependencies finish. Binary packages
+  are installed up front as they require no build-time ordering.
+
+  Requires R >= 4.0 for full parallelism; older versions fall back to
+  sequential installation.
+
+* PPM is now enabled by default on arm64 Linux, as Posit Package Manager
+  now serves binaries for that platform. (#2241)
+
+* New function `renv::plan()` resolves the packages required by a project
+  and generates a lockfile, without installing any packages. This can be
+  used to preview what `renv::restore()` would install. Similarly,
+  `renv::checkout()` with `actions = "snapshot"` now writes the resolved
+  lockfile directly from repository metadata, rather than requiring
+  packages to be installed first. Both functions accept a `dependencies`
+  parameter (defaulting to `"strong"`) to control which dependency types
+  are included in the recursive dependency tree.
+
+* `renv::restore()` now consults the per-package `Repository` URL recorded
+  in the lockfile when resolving and downloading packages. Previously, only
+  the global repository list was used. The new `strict` parameter controls
+  whether packages with a URL-valued `Repository` field must be retrieved
+  from that exact repository (`strict = TRUE`) or merely prefer it
+  (`strict = FALSE`, the default).
+
+* Bootstrap failures during `.Rprofile` processing now emit a warning
+  instead of an error.
+
+* `renv::embed()` now warns when required packages are not found in the
+  resolved lockfile. Previously, dependencies missing from the project
+  lockfile were silently omitted from the generated `renv::use()` call.
+  (#2178)
+
+* `renv::embed()` gains support for `lockfile = NA`, which resolves
+  package versions from the active package repositories rather than
+  from installed packages or a lockfile. (#2178)
+
+* `renv::dependencies()` now detects packages referenced via
+  `system.file(..., package = "pkg")` calls. (#2236)
+
+* The `renv.bioconductor.version` option is now respected as a global
+  override during `renv::restore()` and `renv::load()`. Previously, the
+  Bioconductor version recorded in the lockfile would take precedence,
+  preventing users from overriding the Bioconductor version when needed.
+  (#2218)
+
+* renv now strips embedded credentials from repository URLs when writing
+  the lockfile. URLs of the form `https://user:token@host/path` are
+  sanitized to `https://host/path`, preventing accidental credential
+  leakage when sharing `renv.lock` files. (#2191)
+
+* The renv watchdog is now automatically disabled in child processes
+  launched by parallel frameworks (e.g. `future::multisession`,
+  `parallel::makePSOCKcluster()`, `callr`). (#2223)
+
+* `renv::use(repos = NULL)` now uses a cache-only install path, ensuring
+  packages are only installed from the renv cache and no external sources
+  (repositories, GitHub, etc.) are queried. Previously, `restore()` and
+  `install()` could still reach external sources through internal fallback
+  logic.
+
+* `renv::init(bioconductor = "devel")` now resolves symbolic Bioconductor
+  version names (e.g. `"devel"`, `"release"`) to their numeric equivalents
+  before writing to the lockfile. Previously, the literal string `"devel"`
+  was written, causing `renv::restore()` to fail. (#2170)
+
+* renv gains the configuration option `renv.config.crandb.enabled`. When
+  enabled, renv will query the [crandb](https://github.com/r-hub/crandb)
+  service to find the newest version of a package compatible with the current
+  version of R. This can be useful when using an older version of R, where
+  the latest version of a package on CRAN requires a newer R version.
+  (#1735)
+
+# renv 1.1.8
+
+* Update to conform with changes to the R API.
+
+
+# renv 1.1.7
+
+* Fixed an issue where `.renvignore` files were not read when the project root
+  was the filesystem root `/`. (#2203)
+
+* Fixed an issue where `renv` would incorrectly warn about the version of
+  `renv` being used on project load. (#2207)
+
+* The renv version mismatch warning is now suppressed during bootstrap when
+  `RENV_CONFIG_STARTUP_QUIET=TRUE` or `RENV_CONFIG_SYNCHRONIZED_CHECK=FALSE`
+  is set. (#2214)
+
+* Fixed an issue where `RENV_CONFIG_REPOS_OVERRIDE` with multiple named
+  repositories (e.g., `NAME1=URL1;NAME2=URL2`) was not properly decoded by
+  the configuration system, causing functions like `renv::install()` and
+  `renv::restore()` to not use the specified repositories. (#2209)
+
+
+# renv 1.1.6
+
+* A new setting, `snapshot.dev`, has been added to control whether development
+  dependencies are included by default when calling `renv::snapshot()` or
+  `renv::status()`. This setting defaults to `FALSE`. (#2190)
+
+* `RENV_CONFIG_REPOS_OVERRIDE` now supports multiple named repositories using
+  the syntax `NAME1=URL1;NAME2=URL2`. Single repository URLs continue to be
+  supported.
+
+* Fixed an issue where `renv::sysreqs()` could fail on operating systems
+  which don't declare a VERSION_ID in `/etc/os-release`. (#2197)
+
+* `renv::dependencies()` now detects packages used in e.g.
+  `data(<dataset>, package = <package>)`. (#2181)
+
+* Fixed an issue where cache callbacks (e.g. those run by setting
+  `RENV_CACHE_USER` and `RENV_CACHE_MODE`, or via the `renv.cache.callback`
+  option) were not run after `renv::hydrate()`. (#2179)
+
+* `renv::embed()` now errs if one or more of the package dependencies to
+  be included within a file are not available. (#2178)
+
+* `renv` gains the function `renv::vulns()`, which can be used to query
+  vulnerability information from a Posit Package Manager instance.
+  This information can be queried either for a specific set of packages,
+  or for all packages defined in a lockfile.
+
+* `renv` now also supports `RENV_LOCKFILE_VERSION = 1` as an alternate
+  way to request the older, compact lockfiles. (#2175)
+
+* The version check in `renv::status()` can now be disabled by setting
+  `options(renv.status.check_version = FALSE)`. (#2167)
+
+* Fixed an issue where the package manager URL was computed incorrectly
+  with RHEL 10.
+
+* `renv` now prints the version numbers of the packages it downloads during
+  install and restore. (#1925)
+
+* The `renv` configuration option `bioconductor.init` can now be used to
+  control the default argument passed for the `bioconductor` parameter in
+  calls to `renv::init()`. (#2128)
+
+* `renv` now supports bootstrapping itself from the global package
+  cache. (#1799)
+  
+* `renv` now prefers appending, rather than prepending, Bioconductor
+  repositories to the current set of repositories when installing
+  packages. This implies that if you're using a repository that also
+  provides Bioconductor packages, this repository will be preferred
+  as opposed to the "default" Bioconductor repositories. (#2128)
+  
+* `renv::restore()` now ignores the `Repository` field on lockfile entries
+  when the `repos.override` configuration option is set. (#2127)
+
+* `renv::restore()` now transforms binary repository URLs appropriately,
+  for installed packages which were recorded as installed from an
+  alternate binary repository URL. (#2127)
+
+
+# renv 1.1.5
+
+* Fixed an issue where `renv::dependencies()` could fail for chunks which
+  had a `label` which was not a length-one character vector. (#2144)
+
+* Fixed an issue where `file.rename()` could fail when unpacking a
+  package during installation in certain Windows environments. (#2156)
+
+* `renv`'s dependency discovery now supports usages of `base::use()`. (#2130)
+
+* Fixed an issue where `renv` could fail to parse remote references
+  containing an `@` character. (#2135)
+
+* Fixed an issue where `renv::sysreqs(distro = <...>)` could fail when
+  passed an alternate distribution without a version specifier. (#2105)
+
+* Fixed an issue where multimode R documents containing chunk headers
+  which did not parse to an R list could cause dependency inference
+  to fail. (#2110)
+
+
 # renv 1.1.4
 
 * Fixed an issue where `renv` could erroneously record packages installed
@@ -6,8 +190,8 @@
 
 * `renv` now only checks for archived packages during installation when
   `options(renv.install.allowArchivedPackages = TRUE)` is set. This fixes
-  an issue where `renv` could erroneously discover that Rcpp 1.3 was available
-  when using the Posit Package Manager repository.
+  an issue where `renv` could erroneously discover that Rcpp 1.3 was
+  available when using the Posit Package Manager repository.
 
 * Fixed an issue where `renv::dependencies()` could fail with an
   unhelpful error message if the scanned document contained a
@@ -1460,7 +1644,7 @@
   
 * `renv::snapshot()` gains the `reprex` argument. Set this to `TRUE` if you'd
   like to embed an renv lockfile as part of a reproducible example, as
-  generated by the [`reprex`](https://www.tidyverse.org/help/#reprex-pkg)
+  generated by the [`reprex`](https://tidyverse.org/help/#reprex-pkg)
   package.
   
 * `renv::status()` now reports packages that are referenced in a project's
@@ -1581,7 +1765,7 @@
   path. (#562)
 
 * `renv::snapshot()` no longer excludes the project itself, for `R` package
-  projects that use [golem](https://engineering-shiny.org/). (#538)
+  projects that use `golem`. (#538)
   
 * The renv configuration option `cache.symlinks` can now be used to control
   whether renv used symlinks into the cache, as opposed to full package
@@ -1888,7 +2072,7 @@
 
 * Packages installed from GitHub using `renv::install()` will now also have
   `Github*` fields added, in addition to the default `Remote*` fields. This
-  should help fix issues when attempting to deploy projects to RStudio Connect
+  should help fix issues when attempting to deploy projects to Posit Connect
   requiring packages installed by renv. (#397)
   
 * renv now prefers using a RemoteType field (if any) when attempting to

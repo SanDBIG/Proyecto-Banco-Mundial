@@ -10,7 +10,7 @@ dependencies	dependencies
 diagnostics	diagnostics
 embed	embed
 equip	equip
-graph	graph
+graphviz	graphviz
 history	history
 hydrate	hydrate
 imbue	imbue
@@ -29,6 +29,7 @@ lockfile_write	lockfiles
 migrate	migrate
 modify	modify
 paths	paths
+plan	plan
 project	project
 purge	purge
 rebuild	rebuild
@@ -55,3 +56,4 @@ upgrade	upgrade
 use	embed
 use_python	use_python
 vendor	vendor
+vulns	vulns
