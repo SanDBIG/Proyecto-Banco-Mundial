@@ -71,7 +71,7 @@ sapply(data_clean, class) #Comprobar si fueron transformadas
 
 # Dado lo anterior, debemos pasar los años a formato long, osea hacia abajo.
 # Ya que el CSV muestra en formato wide los datos, un criterio básico es ver
-# hacia donde están apilados los años, si es hacia la derecha es wide, si son 
+# hacia donde están apilados los anios, si es hacia la derecha es wide, si son 
 # hacia abajo es long.
 
 
