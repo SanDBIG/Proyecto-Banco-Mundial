@@ -11,3 +11,17 @@ dim(data_raw)
 names(data_raw)
 unique(data_raw["Country Name"])
 
+
+# Tabla EDA ---------------------------------------------------------------
+
+eda_table <- data_clean %>%
+  summarise(
+    observaciones = n(),
+    promedio = mean(Value,na.rm = TRUE),
+    mediana = median(Value,na.rm = TRUE),
+    minimo = min(Value,na.rm = TRUE),
+    maximo = max(Value,na.rm = TRUE),
+    desviacion = sd(Value,na.rm = TRUE)
+  )
+
+print(eda_table)
