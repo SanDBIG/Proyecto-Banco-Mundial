@@ -42,7 +42,7 @@
 - **Estructura documentación:**
 
   - Push: Es un comando de git que nos sirve para subir los cambio de
-    nuestro proyecto o repositorio local a un repositorio remoto.^1
+    nuestro proyecto o repositorio local a un repositorio remoto.\[1^\]
 
   - Pull:Es un comando de git que nos permite extraer o descargar los
     cambios de un repositorio remoto y los integra en tu rama actual del
@@ -323,16 +323,22 @@ flujo de trabajo ordenado y reproducible.
   elegante, basada en un diseño de tres secciones principales: un
   encabezado (header), una barra lateral de navegación (sidebar) y un
   cuerpo central (body) donde se alojan los gráficos y tablas.
+- **Tidymodels**: Usaremos el paquete de Tidyverse que es una colección
+  de paquetes de R que permiten preparar, procesar y graficar bases de
+  datos. Para modelos de ML supervisados rsample(Division de datos),
+  recipes(procesamiento de datos, crear variables, estandarizar
+  variables), parsnip(Especificación de modelos estadísticos;
+  regresión,regresión logística, árboles de decisión,entre otros),
+  workflows(agrupa en un único objeto la receta de preprocesamiento y la
+  especificación del modelo, garantizando la consistencia entre el
+  entrenamiento y la predicción. Este enfoque empaqueta transformaciones
+  y algoritmos, previniendo errores comunes al aplicar pasos de
+  preparación a nuevos datos de manera reproducible), yardstick
+  (Calcular métricas y mide el error del modelo),skimr(permite hacer un
+  EDA general).
 
-**Tidymodels**: Usaremos el paquete de Tidyverse que es una colección de
-paquetes de R que permiten preparar, procesar y graficar bases de datos.
-Para modelos de ML supervisados rsample(Division de datos),
-recipes(procesamiento de datos, crear variables, estandarizar
-variables), parsnip(Especificación de modelos estadísticos;
-regresión,regresión logística, árboles de decisión,entre otros),
-workflows(agrupa en un único objeto la receta de preprocesamiento y la
-especificación del modelo, garantizando la consistencia entre el
-entrenamiento y la predicción. Este enfoque empaqueta transformaciones y
-algoritmos, previniendo errores comunes al aplicar pasos de preparación
-a nuevos datos de manera reproducible), yardstick (Calcular métricas y
-mide el error del modelo),skimr(permite hacer un EDA general).
+------------------------------------------------------------------------
+
+## Referencias
+
+\[1\]

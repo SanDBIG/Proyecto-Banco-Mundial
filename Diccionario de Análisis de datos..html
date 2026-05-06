@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Diccionario de Análisis de datos</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="Diccionario de Análisis de datos._files/libs/clipboard/clipboard.min.js"></script>
+<script src="Diccionario de Análisis de datos._files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="Diccionario de Análisis de datos._files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="Diccionario de Análisis de datos._files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="Diccionario de Análisis de datos._files/libs/quarto-html/popper.min.js"></script>
+<script src="Diccionario de Análisis de datos._files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Diccionario de Análisis de datos._files/libs/quarto-html/anchor.min.js"></script>
+<link href="Diccionario de Análisis de datos._files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Diccionario de Análisis de datos._files/libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Diccionario de Análisis de datos._files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Diccionario de Análisis de datos._files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Diccionario de Análisis de datos._files/libs/bootstrap/bootstrap-4d7f0bce1131f3e5f9547cd857cfbfc8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#introducción-y-objetivos-del-proyecto" id="toc-introducción-y-objetivos-del-proyecto" class="nav-link active" data-scroll-target="#introducción-y-objetivos-del-proyecto">Introducción y Objetivos del Proyecto</a></li>
+  <li><a href="#programación-y-lenguajes" id="toc-programación-y-lenguajes" class="nav-link" data-scroll-target="#programación-y-lenguajes">Programación y Lenguajes</a></li>
+  <li><a href="#estadística-y-análisis-de-datos" id="toc-estadística-y-análisis-de-datos" class="nav-link" data-scroll-target="#estadística-y-análisis-de-datos">Estadística y Análisis de Datos</a></li>
+  <li><a href="#bases-de-datos-y-sql" id="toc-bases-de-datos-y-sql" class="nav-link" data-scroll-target="#bases-de-datos-y-sql">Bases de Datos y SQL</a></li>
+  <li><a href="#ciencia-de-datos-y-machine-learning" id="toc-ciencia-de-datos-y-machine-learning" class="nav-link" data-scroll-target="#ciencia-de-datos-y-machine-learning">Ciencia de Datos y Machine Learning</a></li>
+  <li><a href="#herramientas-y-ecosistema-de-r" id="toc-herramientas-y-ecosistema-de-r" class="nav-link" data-scroll-target="#herramientas-y-ecosistema-de-r">Herramientas y Ecosistema de R</a></li>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias">Referencias</a></li>
+  </ul>
+</nav>
+</div>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Diccionario de Análisis de datos</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><a href="URL_DE_TU_APP_SHINY_AQUI" target="_blank" style="text-decoration: none;"> <button type="button" class="btn btn-primary btn-lg"> 🚀 Ver Dashboard Interactivo </button> </a></p>
+<section id="introducción-y-objetivos-del-proyecto" class="level2">
+<h2 class="anchored" data-anchor-id="introducción-y-objetivos-del-proyecto">Introducción y Objetivos del Proyecto</h2>
+<ul>
+<li><p><strong>Habilidades Consultivas</strong>: Te prepararemos para enfrentar proyectos que impliquen gestionar necesidades de nuestros clientes y planificar entregables y tareas para su consecución.</p>
+<ul>
+<li>Encontrar un problema <strong>SIMPLE</strong>, es mandatorio para iniciar, los proyectos en data siempre parten de cosas pequeñas y van abarcando más cosas.</li>
+<li>Usar <strong>Scrum</strong> o <strong>Kanban</strong></li>
+</ul></li>
+<li><p><strong>Bases de datos relacionales y SQL</strong>: Fundamentos esenciales para manejar la información.</p>
+<ul>
+<li>Armar una estructura simple relacional en sql, probablemente postgre, ver bien.</li>
+</ul></li>
+<li><p><strong>Data warehouses y procesos ETL</strong>: Para la preparación y organización de grandes volúmenes de datos.</p>
+<ul>
+<li>Definir el protocolo <strong>Extract</strong> - <strong>Transform</strong> - <strong>Load</strong></li>
+</ul></li>
+<li><p><strong>Herramientas de visualización</strong>: Para transformar datos en insights accionables.</p>
+<ul>
+<li>Looker Studio, alternativa con python.</li>
+</ul></li>
+<li><p><strong>Prompting engineering y modelos de machine learning</strong>: Te introduciremos en la vanguardia de la inteligencia artificial y el análisis predictivo.</p>
+<ul>
+<li>Usar IA en local para mantener prompting engineering. Algún modelo de LLama cumple perfecto.</li>
+<li>Encontrar algún modelo de machine learning para usar en el proyecto podría ser un random forest pero es mejor ver el problema primero.</li>
+</ul></li>
+<li><p><strong>Estructura documentación:</strong></p>
+<ul>
+<li><p><strong>Push</strong>: Es un comando de git que nos sirve para subir los cambio de nuestro proyecto o repositorio local a un repositorio remoto.</p></li>
+<li><p><strong>Pull</strong>: Es un comando de git que nos permite extraer o descargar los cambios de un repositorio remoto y los integra en tu rama actual del repositorio local. Estas modificaciones pueden haber sido hechas por otras personas de tu equipo en su computadora.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p></li>
+<li><p><strong>Fork</strong>: Es una copia exacta en crudo “bare” del repositorio original que podemos usar como un repositorio git cualquiera. Al hacer fork tendremos 2 repositorios git identicos pero con distinta URL. Se puede avanzar de forma autonoma sin que los cambios del original se transmitan a la copia y viceversa. Se diferencia a un clon porque el Fork crea un nuevo repositorio en github pero con diferente URL. sobre este repositorio se hace un clon para trabajar de forma autonoma de forma que cuando hagamos un push los cambios se guardaran al Fork.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p></li>
+<li><p><strong>Branch</strong>: Son espacios de trabajo aislados que te permiten experimentar, construir y probar cambios sin afectar a tu código principal (main). Para crear un branch es necesario haber creado un repositorio, haber lanzado un primer commit y tener acceso a la escritura del repositorio. Posteriormente se puede trabajar el branch y hacer modificaciones al código principal, en caso de trabajos colaborativos se puede mandar un pull request (que es un permiso) y una vez confirmados los cambios se realizar un Merge (fusión). dependiendo de lo que se trabaje en el branch entre las que se destacan: feature, bugfix, hotfix, release.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p></li>
+</ul></li>
+</ul>
+</section>
+<section id="programación-y-lenguajes" class="level2">
+<h2 class="anchored" data-anchor-id="programación-y-lenguajes">Programación y Lenguajes</h2>
+<ul>
+<li><strong>Niveles de los lenguajes de programación (Alto, bajo, etc)</strong>: Los niveles de los lenguajes de programación se clasifican según su proximidad al hardware o al lenguaje humano, dividiéndose principalmente en tres categorías: los lenguajes de bajo nivel, que operan directamente sobre el hardware y los componentes físicos de la computadora; los lenguajes de nivel medio, que ofrecen una sintaxis más legible y abstracta sin perder la capacidad de gestionar manualmente la memoria; y los lenguajes de alto nivel, que son independientes de la arquitectura de la máquina y automatizan procesos complejos como la gestión de memoria para priorizar la facilidad de uso. Algunos ejemplo de lenguajes por nivel son:
+<ul>
+<li><strong>Bajo nivel</strong>: Lenguaje Ensamblador</li>
+<li><strong>Nivel medio</strong>: C, C++</li>
+<li><strong>Alto nivel</strong>: Python, R, Java.</li>
+</ul></li>
+<li><strong>Programación Orientada a Objetos</strong>: La Programación Orientada a Objetos es un paradigma que organiza el desarrollo de software mediante la creación de objetos, los cuales actúan como unidades que combinan datos (<strong>atributos</strong>) y comportamientos (<strong>métodos</strong>) para representar elementos del mundo real. A diferencia de la programación tradicional basada en pasos lógicos, este modelo utiliza clases como moldes para estructurar el código, apoyándose en pilares como la abstracción, el encapsulamiento, la herencia y el polimorfismo. Su objetivo principal es facilitar la reutilización de código, mejorar la escalabilidad y permitir que sistemas complejos sean más fáciles de mantener al segmentar la lógica en componentes independientes y funcionales.</li>
+</ul>
+</section>
+<section id="estadística-y-análisis-de-datos" class="level2">
+<h2 class="anchored" data-anchor-id="estadística-y-análisis-de-datos">Estadística y Análisis de Datos</h2>
+<ul>
+<li><p><strong>Estadística</strong>: Es una rama de las matemáticas aplicadas<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> que estudia la variabilidad de los fenomenos y procesos aleatorios. Encargada de recopilar, organizar, analizar, interpretar y presentar datos para transformar información compleja en conclusiones significativas. A grandes rasgos existen 2 tipos de estadística:</p></li>
+<li><p><strong>Estadistica descriptiva</strong>: Se dedica a la descripción, visualización y resumen de datos originados a partir de los fenómenos de estudio. Los datos pueden ser resumidos numérica o gráficamente. Su objetivo es organizar y describir las características sobre un conjunto de datos con el propósito de facilitar su aplicación, generalmente con el apoyo de gráficas, tablas o medidas numéricas.</p></li>
+<li><p><strong>Estadistica inferencial</strong>: Se dedica a la generación de los modelos, inferencias y predicciones asociadas a los fenómenos en cuestión teniendo en cuenta la aleatoriedad de las observaciones. Se usa para modelar patrones en los datos y extraer inferencias acerca de la población bajo estudio. Estas inferencias pueden tomar la forma de respuestas a preguntas sí/no (prueba de hipótesis), estimaciones de unas características numéricas (estimación), pronósticos de futuras observaciones, descripciones de asociación (correlación) o modelamiento de relaciones entre variables (análisis de regresión). Otras técnicas de modelamiento incluyen análisis de varianza, series de tiempo y minería de datos. Su objetivo es obtener conclusiones útiles para lograr hacer deducciones acerca de la totalidad de las observaciones hechas, basándose en la información numérica.</p></li>
+<li><p><strong>EDA</strong>: El análisis exploratorio de datos (EDA) es un proceso de investigación basado en la utilización de estadísticas de resúmen y herramientas gráficas con la finalidad de conocer los datos y comprender que se puede obtener con ellos, se identifican posibles patrones entre variables, anomalías como valores atípicos u observaciones inusuales<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>. A partir de esto se pueden generar preguntas o hipótesis interesantes que se pueden comprobar más adelante mediante métodos estadísticos más formales<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>. entre los tipos de EDA se destacan los siguientes:</p>
+<ul>
+<li><p><strong>Análisis univariado</strong>: El objetivo principal de este tipo de evaluación de datos es analizar las características sobresalientes de las variables. Se centra en una variable a la vez. Visualiza y resume la tendencia y distribución de características de esa variable. Para hacer esto, el uso de técnicas como gráficos de barras e histogramas refuerza la precisión de los datos.</p></li>
+<li><p><strong>Análisis Bivariado</strong>: El método bivariado es una forma desarrollada del análisis univariado con dos variables. Sin embargo, esta vez, el análisis bivariado considera la variable y las conexiones, correlaciones y dependencias entre variables. Las técnicas que utiliza son naturalmente diferentes de las univariadas. Utiliza gráficos como gráficos de dispersión y matrices de correlación, que se encuentran entre los más utilizados. Si tiene datos con más de dos variables, entonces puede utilizar análisis multivariado.</p></li>
+<li><p><strong>Estadísticas descriptivas</strong>: Las estadísticas descriptivas recopilan las líneas principales de los datos como un resumen. Pero lo hace a través de tres ramas separadas. Estas son la distribución, las medidas de tendencia central (media, mediana, moda) y las medidas de variabilidad (rango, desviación estándar, varianza, rango intercuartil). Resumir utilizando estas revela las propiedades del conjunto de datos.</p></li>
+<li><p><strong>Reducción de dimensionalidad</strong>: Este tipo también reduce el tamaño de conjuntos de datos multidimensionales eliminando todo excepto las partes necesarias. Por lo tanto, determina qué información es esencial y cuál es insignificante. El análisis de componentes principales (PCA) o el vecino estocástico t-distribuido (t-SNE) son técnicas comunes utilizadas en este proceso. Aseguran una comprensión y clasificación saludables de los datos.</p></li>
+<li><p><strong>Visualización exploratoria de datos</strong>: La visualización de datos siempre es útil porque revela estadísticas con representaciones visuales. Este método ha sido ampliamente utilizado en otros tipos de análisis. Por lo tanto, también puedes beneficiarte de él en el análisis exploratorio de datos. Esto te permite ver conjuntos de datos complejos con un modelo sencillo.</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="bases-de-datos-y-sql" class="level2">
+<h2 class="anchored" data-anchor-id="bases-de-datos-y-sql">Bases de Datos y SQL</h2>
+<ul>
+<li><strong>SQL</strong>: Es un lenguaje de consulta estructurada (Structured Query Language) para almacenar y procesar información en una base de datos relacional. Hay varios tipos de bases de datos SQL, tales como: MySQL, Postgre SQL, entre otros<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>. Ahora bien, los comandos de SQL se dividen en categorías según su función principal tales como, consultar, manipular, definir o controlar los datos. A continuación se detallan los principales según su uso:
+<ul>
+<li><strong>Lenguaje de Consulta de Datos (DQL)</strong> Es el más utilizado, ya que sirve para obtener y visualizar información sus comandos son:
+<ul>
+<li>SELECT: El comando fundamental para pedir datos a las tablas.</li>
+<li>WHERE: Filtra los resultados para ver solo lo que cumple una condición específica.</li>
+<li>ORDER BY: Ordena los resultados (ascendente o descendente).</li>
+<li>JOIN: Permite combinar datos de dos o más tablas relacionadas. los comandos más importantes son SELECT, INSERT, WHERE, DELETE, UPDATE</li>
+</ul></li>
+<li><strong>Lenguaje de manipulación de datos (DML)</strong> Se usan para modificar el contenido de las tablas sus comandos son:
+<ul>
+<li>INSERT: Añade nuevos registros a una tabla.</li>
+<li>UPDATED: Cambia datos que ya existen (por ejemplo, corregir un precio).</li>
+<li>DELETED: Borra registros específicos.</li>
+</ul></li>
+<li><strong>Lenguaje de Definición de Datos (DDL)</strong> Se encargan de crear y modificar la estructura de la base de datos. Los comandos más utilizados son:
+<ul>
+<li>ALTER: Modifica la estructura de una tabla existente.</li>
+<li>DROP: Elimina permanentemente una tabla o base de datos completa.</li>
+<li>CREATED: Crea nuevas bases de datos, tablas o índices.<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a></li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="ciencia-de-datos-y-machine-learning" class="level2">
+<h2 class="anchored" data-anchor-id="ciencia-de-datos-y-machine-learning">Ciencia de Datos y Machine Learning</h2>
+<ul>
+<li><p><strong>Métodos computacionales</strong>: Los métodos computacionales son herramientas algorítmicas y modelos matemáticos que permiten a la ciencia de datos procesar volúmenes masivos de información de manera escalable y automatizada. Su aplicación fundamental reside en el aprendizaje automático para generar predicciones, el uso de simulaciones virtuales para evaluar escenarios complejos y la gestión de la incertidumbre mediante enfoques probabilísticos, facilitando así la extracción de patrones significativos en entornos de <strong>Big Data</strong> a través de lenguajes y bibliotecas especializadas.</p></li>
+<li><p><strong>Machine learning (ML)</strong>: Es una disciplina dentro del campo de la inteligencia que dota a los ordenadores de algoritmos capaces de identificar patrones en datos masivos y realizar predicciones (Análisis predictivo). El aprendizaje permite a los computadores realizar tareas de forma autónoma. Los algoritmos de Machine learning se dividen en tres categorías:</p>
+<ol type="1">
+<li><p><strong>Aprendizaje supervisado</strong>: Son algoritmos que cuentan con un aprendizaje previo basado en un sistema de etiquetas asociadas a unos datos que les permiten tomar decisiones o hacer predicciones</p></li>
+<li><p><strong>Aprendizaje no supervisado</strong>: Son algoritmos que no cuentan con un conocimiento previo, trabajan en base al caos de los datos con el objetivo de encontrar patrones que permitan organizarlos de alguna manera</p></li>
+<li><p><strong>Aprendizaje por refuerzo</strong>: Son algoritmos que aprenden a partir de la propia experiencia. Esto es, que sea capaz de tomar la mejor decisión ante diferentes situaciones de acuerdo a un proceso de prueba y error en el que se recompensan las decisiones correctas. En la actualidad se está utilizando para posibilitar el reconocimiento facial, hacer diagnósticos médicos o clasificar secuencias de ADN. La disciplina de machine learning está estrechamente entrelazada con la de ciencia de datos. En cierto sentido, el machine learning puede entenderse como una colección de algoritmos y técnicas para automatizar el análisis de datos y (lo que es más importante) aplicar los aprendizajes de ese análisis a la ejecución autónoma de tareas relevantes.</p></li>
+</ol></li>
+</ul>
+</section>
+<section id="herramientas-y-ecosistema-de-r" class="level2">
+<h2 class="anchored" data-anchor-id="herramientas-y-ecosistema-de-r">Herramientas y Ecosistema de R</h2>
+<ul>
+<li><p><strong>Rstudio</strong>: RStudio es un entorno de desarrollo integrado (IDE) disponible para R, el cual tiene un buen editor con resaltado de sintaxis, un visor de objetos de R y un gran número de características agradables que están integradas. Además, está dedicado a la computación estadística y gráficos.</p></li>
+<li><p><strong>Librería (Paquete)</strong>: Las librerías o también conocida como paquetes son colecciones de funciones, datos y documentación que extiende la funcionalidad básica del lenguaje utilizado en el presente trabajo se usarán los siguientes paquetes:</p>
+<ul>
+<li><strong>tidyverse</strong>: Permiten preparar, procesar y graficar bases de datos.</li>
+<li><strong>renv</strong>: Ayuda a crear entornos reproducibles para proyectos en R<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></li>
+<li><strong>janitor</strong>: Limpieza de nombres y tablas</li>
+<li><strong>skimr</strong>: Exploración rápida de datos</li>
+<li><strong>lubridate</strong>: Manejo de fechas</li>
+<li><strong>readxl</strong>: Importar Excel</li>
+<li><strong>writexl</strong>: Exportar Excel</li>
+<li><strong>data.table</strong>: Manipulación rápida de grandes datasets</li>
+<li><strong>scales</strong>: Escalas para gráficos</li>
+<li><strong>patchwork</strong>: Combinar gráficos ggplot</li>
+<li><strong>ggthemes</strong>: Temas adicionales para gráficos.</li>
+</ul></li>
+<li><p><strong>Rproject - entornos de desarrollo</strong>: Un entorno de desarrollo es el conjunto de herramientas, software y configuraciones que un programador utiliza para escribir, probar y depurar código de manera eficiente. En lugar de usar un simple bloc de notas, se utiliza un <strong>IDE</strong> (Entorno de Desarrollo Integrado), que es un programa especializado que incluye: <strong>Editor de texto</strong> (con colores que resaltan la sintaxis), <strong>Consola</strong> (para ejecutar el código al instante), <strong>Depurador</strong> (para encontrar y corregir errores) y <strong>Gestor de archivos</strong> (para ver las carpetas del proyecto). En el caso de R el entorno de desarrollo es RStudio. Por otra parte, un <strong>RProject</strong> es una funcionalidad dentro del entorno de RStudio que organiza el trabajo en unidades autónomas al generar un archivo con extensión .Rproj en una carpeta específica. Su función principal es gestionar automáticamente el directorio de trabajo, lo que garantiza que todas las rutas de archivos sean relativas a esa ubicación y permite que el proyecto sea totalmente portable entre diferentes computadoras sin necesidad de ajustar configuraciones internas. Al abrirlo, el sistema restaura el estado previo de la sesión, incluyendo el historial y las pestañas abiertas, asegurando que los datos y procesos de un análisis no se mezclen con otros y facilitando así un flujo de trabajo ordenado y reproducible.</p></li>
+<li><p><strong>Shinydashboard</strong>: Un shinydashboard es una extensión del paquete <strong>Shiny</strong> para R diseñada específicamente para construir tableros de control profesionales (<strong>dashboards</strong>). Su función es organizar visualizaciones de datos y métricas en una interfaz estructurada y elegante, basada en un diseño de tres secciones principales: un encabezado (<strong>header</strong>), una barra lateral de navegación (<strong>sidebar</strong>) y un cuerpo central (<strong>body</strong>) donde se alojan los gráficos y tablas.</p></li>
+<li><p><strong>Tidymodels</strong>: Usaremos el paquete de Tidyverse que es una colección de paquetes de R que permiten preparar, procesar y graficar bases de datos. Para modelos de ML supervisados <strong>rsample</strong> (Division de datos), <strong>recipes</strong> (procesamiento de datos, crear variables, estandarizar variables), <strong>parsnip</strong> (Especificación de modelos estadísticos; regresión, regresión logística, árboles de decisión, entre otros), <strong>workflows</strong> (agrupa en un único objeto la receta de preprocesamiento y la especificación del modelo, garantizando la consistencia entre el entrenamiento y la predicción. Este enfoque empaqueta transformaciones y algoritmos, previniendo errores comunes al aplicar pasos de preparación a nuevos datos de manera reproducible), <strong>yardstick</strong> (Calcular métricas y mide el error del modelo), <strong>skimr</strong> (permite hacer un EDA general).<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a></p></li>
+</ul>
+<hr>
+</section>
+<section id="referencias" class="level2">
+<h2 class="anchored" data-anchor-id="referencias">Referencias</h2>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Para ver más funciones de git push y pull ver: <a href="https://dev-to.translate.goog/alexmercedcoder/mastering-git-a-comprehensive-guide-to-git-pull-and-git-push-2eo3?_x_tr_sl=en&amp;_x_tr_tl=es&amp;_x_tr_hl=es&amp;_x_tr_pto=sge#:~:text=Sección%202:%20Dominando%20git%20push,integridad%20del%20historial%20del%20proyecto">Mastering Git: A Comprehensive Guide to git pull and git push</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Como hacer un Fork y definición: <a href="https://aprendegit.com/fork-de-repositorios-para-que-sirve/">Aprende GIT</a>;<a href="https://git-scm.com/book/es/v2/GitHub-Participando-en-Proyectos">GitHub - Participando en Proyectos</a>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Branch en github: <a href="https://docs.github.io/es/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches">Acerca de las ramas documentos github</a>.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Matemáticas aplicadas: Métodos y herramientas matemáticos que pueden ser utilizados en el análisis o resolución de problemas pertenecientes al área de las ciencias básicas o aplicadas como el cálculo, el álgebra lineal, las ecuaciones diferenciales y otros procedimientos ideados desde que se acuñó el concepto.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>EDA definición: <a href="https://www.jmp.com/es/statistics-knowledge-portal/exploratory-data-analysis#:~:text=¿Qué%20es%20el%20análisis%20exploratorio,aprender%2C%20no%20confirmar%20hipótesis%20estadísticas">analisis exploratorio de datos</a>.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>Tipos de EDA: <a href="https://forms.app/es/blog/analisis-exploratorio">Análisis exploratorio: Definición, tipos y herramientas</a>.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>Véase más información en: <a href="https://aws.amazon.com/es/what-is/sql/#:~:text=es%20importante%20SQL?-,El%20lenguaje%20de%20consulta%20estructurada%20(SQL)%20es%20un%20lenguaje%20de,los%20diferentes%20lenguajes%20de%20programación">¿Qué es SQL (lenguaje de consulta estructurada)?</a>.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>Véase más comandos en: <a href="https://learnsql.es/blog/los-comandos-sql-mas-importantes/">Los comandos SQL más importantes</a>.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>Véase más información en: <a href="https://rstudio.github.io/renv/articles/renv.html">Introducción al renv</a>.<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10"><p>Carga de paquetes y usos de Tidymodels: <a href="https://www.youtube.com/watch?v=IZ45jAFcmFU&amp;t=2567s">Usando R para Machine Learning con tidymodels</a>.<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

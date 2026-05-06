@@ -1,16 +1,21 @@
 ---
-title: "Diccionario de Análisis de datos."
-format: gfm
+title: "Diccionario de Análisis de datos"
+format:
+  html:
+    toc: true
+    toc-location: left
+    theme: cosmo
 editor: visual
 ---
 
-**Diccionario de Análisis de datos.**
+<a href="URL_DE_TU_APP_SHINY_AQUI" target="_blank" style="text-decoration: none;"> <button type="button" class="btn btn-primary btn-lg"> 🚀 Ver Dashboard Interactivo </button> </a>
 
--   **Habilidades Consultivas**: Te prepararemos para enfrentar proyectos que impliquen gestionar necesidades de nuestros clientes y planificar entregables y tareas para su consecución. 
+## Introducción y Objetivos del Proyecto
 
-    -   Encontrar un problema SIMPLE, es mandatorio para iniciar, los proyectos en data siempre parten de cosas pequeñas y van abarcando más cosas.
+-   **Habilidades Consultivas**: Te prepararemos para enfrentar proyectos que impliquen gestionar necesidades de nuestros clientes y planificar entregables y tareas para su consecución.
 
-    -   Usar Scrum o Kanban
+    -   Encontrar un problema **SIMPLE**, es mandatorio para iniciar, los proyectos en data siempre parten de cosas pequeñas y van abarcando más cosas.
+    -   Usar **Scrum** o **Kanban**
 
 -   **Bases de datos relacionales y SQL**: Fundamentos esenciales para manejar la información.
 
@@ -18,131 +23,120 @@ editor: visual
 
 -   **Data warehouses y procesos ETL**: Para la preparación y organización de grandes volúmenes de datos.
 
-    -   Definir el protocolo Extract - Transform - Load
+    -   Definir el protocolo **Extract** - **Transform** - **Load**
 
 -   **Herramientas de visualización**: Para transformar datos en insights accionables.
 
     -   Looker Studio, alternativa con python.
 
--   **Prompting engineering y modelos de machine learning**: Te introduciremos en la vanguardia de la inteligencia artificial y el análisis predictivo. 
+-   **Prompting engineering y modelos de machine learning**: Te introduciremos en la vanguardia de la inteligencia artificial y el análisis predictivo.
 
     -   Usar IA en local para mantener prompting engineering. Algún modelo de LLama cumple perfecto.
-
     -   Encontrar algún modelo de machine learning para usar en el proyecto podría ser un random forest pero es mejor ver el problema primero.
 
 -   **Estructura documentación:**
 
-    -   Push: Es un comando de git que nos sirve para subir los cambio de nuestro proyecto o repositorio local a un repositorio remoto.\^1
+    -   **Push**: Es un comando de git que nos sirve para subir los cambio de nuestro proyecto o repositorio local a un repositorio remoto.
 
-    -   Pull:Es un comando de git que nos permite extraer o descargar los cambios de un repositorio remoto y los integra en tu rama actual del repositorio local. Estas modificaciones pueden haber sido hechas por otras personas de tu equipo en su computadora.
+    -   **Pull**: Es un comando de git que nos permite extraer o descargar los cambios de un repositorio remoto y los integra en tu rama actual del repositorio local. Estas modificaciones pueden haber sido hechas por otras personas de tu equipo en su computadora.[^1]
 
-    -   Fork: Es una copia exacta en crudo “bare” del repositorio original que podemos usar como un repositorio git cualquiera. Al hacer fork tendremos 2 repositorios git identicos pero con distinta URL. Se puede avanzar de forma autonoma sin que los cambios del original  se transmitan a la copia y viceversa. Se diferencia a un clon porque el Fork crea un nuevo repositorio en github pero con diferente URL. sobre este repositorio se hace un clon para trabajar de forma autonoma de forma que cuando hagamos un push los cambios se guardaran al Fork.
+    -   **Fork**: Es una copia exacta en crudo “bare” del repositorio original que podemos usar como un repositorio git cualquiera. Al hacer fork tendremos 2 repositorios git identicos pero con distinta URL. Se puede avanzar de forma autonoma sin que los cambios del original se transmitan a la copia y viceversa. Se diferencia a un clon porque el Fork crea un nuevo repositorio en github pero con diferente URL. sobre este repositorio se hace un clon para trabajar de forma autonoma de forma que cuando hagamos un push los cambios se guardaran al Fork.[^2]
 
-    -   Branch:Son espacios de trabajo aislados que te permiten experimentar, construir y probar cambios sin afectar a tu código principal (main). Para crear un branch es necesario haber creado un repositorio, haber lanzado un primer commit y tener acceso a la escritura del repositorio.  Posteriormente se puede trabajar el branch y hacer modificaciones al código principal, en caso de trabajos colaborativos se puede mandar un pull request (que es un permiso) y una vez confirmados los cambios se realizar un Merge (fusión). dependiendo de lo que se trabaje en el branch entre las que se destacan: feature, bugfix, hotfix, release.
+    -   **Branch**: Son espacios de trabajo aislados que te permiten experimentar, construir y probar cambios sin afectar a tu código principal (main). Para crear un branch es necesario haber creado un repositorio, haber lanzado un primer commit y tener acceso a la escritura del repositorio. Posteriormente se puede trabajar el branch y hacer modificaciones al código principal, en caso de trabajos colaborativos se puede mandar un pull request (que es un permiso) y una vez confirmados los cambios se realizar un Merge (fusión). dependiendo de lo que se trabaje en el branch entre las que se destacan: feature, bugfix, hotfix, release.[^3]
 
-<!-- -->
+## Programación y Lenguajes
 
--   **EDA:** El análisis exploratorio de datos (EDA) es un proceso de investigación basado en la utilización de estadísticas de resúmen y herramientas gráficas con la finalidad de conocer los datos y comprender que se puede obtener con ellos, se identifican posibles patrones entre variables, anomalías como valores atípicos u observaciones inusuales. A partir de esto se pueden generar preguntas o hipótesis interesantes que se pueden comprobar más adelante mediante métodos estadísticos más formales. entre los tipos de EDA se destacan los siguientes:
+-   **Niveles de los lenguajes de programación (Alto, bajo, etc)**: Los niveles de los lenguajes de programación se clasifican según su proximidad al hardware o al lenguaje humano, dividiéndose principalmente en tres categorías: los lenguajes de bajo nivel, que operan directamente sobre el hardware y los componentes físicos de la computadora; los lenguajes de nivel medio, que ofrecen una sintaxis más legible y abstracta sin perder la capacidad de gestionar manualmente la memoria; y los lenguajes de alto nivel, que son independientes de la arquitectura de la máquina y automatizan procesos complejos como la gestión de memoria para priorizar la facilidad de uso. Algunos ejemplo de lenguajes por nivel son:
+    -   **Bajo nivel**: Lenguaje Ensamblador
+    -   **Nivel medio**: C, C++
+    -   **Alto nivel**: Python, R, Java.
+    
+-   **Programación Orientada a Objetos**: La Programación Orientada a Objetos es un paradigma que organiza el desarrollo de software mediante la creación de objetos, los cuales actúan como unidades que combinan datos (**atributos**) y comportamientos (**métodos**) para representar elementos del mundo real. A diferencia de la programación tradicional basada en pasos lógicos, este modelo utiliza clases como moldes para estructurar el código, apoyándose en pilares como la abstracción, el encapsulamiento, la herencia y el polimorfismo. Su objetivo principal es facilitar la reutilización de código, mejorar la escalabilidad y permitir que sistemas complejos sean más fáciles de mantener al segmentar la lógica en componentes independientes y funcionales.
 
-1.  Análisis univariado: El objetivo principal de este tipo de evaluación de datos es analizar las características sobresalientes de las variables. Se centra en una variable a la vez. Visualiza y resume la tendencia y distribución de características de esa variable. Para hacer esto, el uso de técnicas como gráficos de barras e histogramas refuerza la precisión de los datos.
+## Estadística y Análisis de Datos
 
-2.  Análisis Bivariado: El método bivariado es una forma desarrollada del análisis univariado con dos variables. Sin embargo, esta vez, el análisis bivariado considera la variable y las conexiones, correlaciones y dependencias entre variables.Las técnicas que utiliza son naturalmente diferentes de las univariadas. Utiliza gráficos como gráficos de dispersión y matrices de correlación, que se encuentran entre los más utilizados. Si tiene datos con más de dos variables, entonces puede utilizar análisis multivariado.
+-   **Estadística**: Es una rama de las matemáticas aplicadas[^4] que estudia la variabilidad de los fenomenos y procesos aleatorios. Encargada de recopilar, organizar, analizar, interpretar y presentar datos para transformar información compleja en conclusiones significativas. A grandes rasgos existen 2 tipos de estadística:
 
-3.  Estadísticas descriptivas: Las estadísticas descriptivas recopilan las líneas principales de los datos como un resumen. Pero lo hace a través de tres ramas separadas. Estas son la distribución, las medidas de tendencia central (media, mediana, moda) y las medidas de variabilidad (rango, desviación estándar, varianza, rango intercuartil). Resumir utilizando estas revela las propiedades del conjunto de datos.
+-   **Estadistica descriptiva**: Se dedica a la descripción, visualización y resumen de datos originados a partir de los fenómenos de estudio. Los datos pueden ser resumidos numérica o gráficamente. Su objetivo es organizar y describir las características sobre un conjunto de datos con el propósito de facilitar su aplicación, generalmente con el apoyo de gráficas, tablas o medidas numéricas.
 
-4.  Reducción de dimensionalidad:Este tipo también reduce el tamaño de conjuntos de datos multidimensionales eliminando todo excepto las partes necesarias. Por lo tanto, determina qué información es esencial y cuál es insignificante. El análisis de componentes principales (PCA) o el vecino estocástico t-distribuido (t-SNE) son técnicas comunes utilizadas en este proceso. Aseguran una comprensión y clasificación saludables de los datos.
+-   **Estadistica inferencial**: Se dedica a la generación de los modelos, inferencias y predicciones asociadas a los fenómenos en cuestión teniendo en cuenta la aleatoriedad de las observaciones. Se usa para modelar patrones en los datos y extraer inferencias acerca de la población bajo estudio. Estas inferencias pueden tomar la forma de respuestas a preguntas sí/no (prueba de hipótesis), estimaciones de unas características numéricas (estimación), pronósticos de futuras observaciones, descripciones de asociación (correlación) o modelamiento de relaciones entre variables (análisis de regresión). Otras técnicas de modelamiento incluyen análisis de varianza, series de tiempo y minería de datos. Su objetivo es obtener conclusiones útiles para lograr hacer deducciones acerca de la totalidad de las observaciones hechas, basándose en la información numérica.
 
-5.  Visualización exploratoria de datos: La visualización de datos siempre es útil porque revela estadísticas con representaciones visuales. Este método ha sido ampliamente utilizado en otros tipos de análisis. Por lo tanto, también puedes beneficiarte de él en el análisis exploratorio de datos. Esto te permite ver conjuntos de datos complejos con un modelo sencillo.\
-    \
+-   **EDA**: El análisis exploratorio de datos (EDA) es un proceso de investigación basado en la utilización de estadísticas de resúmen y herramientas gráficas con la finalidad de conocer los datos y comprender que se puede obtener con ellos, se identifican posibles patrones entre variables, anomalías como valores atípicos u observaciones inusuales[^5]. A partir de esto se pueden generar preguntas o hipótesis interesantes que se pueden comprobar más adelante mediante métodos estadísticos más formales[^6]. entre los tipos de EDA se destacan los siguientes:
 
--   **SQL**: Es un lenguaje de consulta estructurada (Structured Query Language) para almacenar y procesar información en una base de datos relacional. hay varios tipos de bases de datos SQL, tales como: MySQL, Postgre SQL, entre otros. Ahora bien, los comandos de SQL se dividen en categorías según su función principal tales como, consultar, manipular, definir o controlar los datos. A continuación se detallan los principales según su uso:
+    -   **Análisis univariado**: El objetivo principal de este tipo de evaluación de datos es analizar las características sobresalientes de las variables. Se centra en una variable a la vez. Visualiza y resume la tendencia y distribución de características de esa variable. Para hacer esto, el uso de técnicas como gráficos de barras e histogramas refuerza la precisión de los datos.
 
-1.  Lenguaje de Consulta de Datos (DQL) Es el más utilizado, ya que sirve para obtener y visualizar información sus comandos son:
+    -   **Análisis Bivariado**: El método bivariado es una forma desarrollada del análisis univariado con dos variables. Sin embargo, esta vez, el análisis bivariado considera la variable y las conexiones, correlaciones y dependencias entre variables. Las técnicas que utiliza son naturalmente diferentes de las univariadas. Utiliza gráficos como gráficos de dispersión y matrices de correlación, que se encuentran entre los más utilizados. Si tiene datos con más de dos variables, entonces puede utilizar análisis multivariado.
 
--   SELECT: El comando fundamental para pedir datos a las tablas.
+    -   **Estadísticas descriptivas**: Las estadísticas descriptivas recopilan las líneas principales de los datos como un resumen. Pero lo hace a través de tres ramas separadas. Estas son la distribución, las medidas de tendencia central (media, mediana, moda) y las medidas de variabilidad (rango, desviación estándar, varianza, rango intercuartil). Resumir utilizando estas revela las propiedades del conjunto de datos.
 
--   WHERE: Filtra los resultados para ver solo lo que cumple una condición específica.
+    -   **Reducción de dimensionalidad**: Este tipo también reduce el tamaño de conjuntos de datos multidimensionales eliminando todo excepto las partes necesarias. Por lo tanto, determina qué información es esencial y cuál es insignificante. El análisis de componentes principales (PCA) o el vecino estocástico t-distribuido (t-SNE) son técnicas comunes utilizadas en este proceso. Aseguran una comprensión y clasificación saludables de los datos.
 
--   ORDER BY: Ordena los resultados (ascendente o descendente).
+    -   **Visualización exploratoria de datos**: La visualización de datos siempre es útil porque revela estadísticas con representaciones visuales. Este método ha sido ampliamente utilizado en otros tipos de análisis. Por lo tanto, también puedes beneficiarte de él en el análisis exploratorio de datos. Esto te permite ver conjuntos de datos complejos con un modelo sencillo.
 
--   JOIN: Permite combinar datos de dos o más tablas relacionadas. los comandos más importantes son SELECT, INSERT, WHERE, DELETE, UPDATE
+## Bases de Datos y SQL
 
-2.   Lenguaje de manipulación de datos (DML) Se usan para modificar el contenido de las tablas sus comandos son:
+-   **SQL**: Es un lenguaje de consulta estructurada (Structured Query Language) para almacenar y procesar información en una base de datos relacional. Hay varios tipos de bases de datos SQL, tales como: MySQL, Postgre SQL, entre otros[^7]. Ahora bien, los comandos de SQL se dividen en categorías según su función principal tales como, consultar, manipular, definir o controlar los datos. A continuación se detallan los principales según su uso:
+    -   **Lenguaje de Consulta de Datos (DQL)** Es el más utilizado, ya que sirve para obtener y visualizar información sus comandos son:
+        -   SELECT: El comando fundamental para pedir datos a las tablas.
+        -   WHERE: Filtra los resultados para ver solo lo que cumple una condición específica.
+        -   ORDER BY: Ordena los resultados (ascendente o descendente).
+        -   JOIN: Permite combinar datos de dos o más tablas relacionadas. los comandos más importantes son SELECT, INSERT, WHERE, DELETE, UPDATE
+    -   **Lenguaje de manipulación de datos (DML)** Se usan para modificar el contenido de las tablas sus comandos son:
+        -   INSERT: Añade nuevos registros a una tabla.
+        -   UPDATED: Cambia datos que ya existen (por ejemplo, corregir un precio).
+        -   DELETED: Borra registros específicos.
+    -   **Lenguaje de Definición de Datos (DDL)** Se encargan de crear y modificar la estructura de la base de datos. Los comandos más utilizados son:
+        -   ALTER: Modifica la estructura de una tabla existente.
+        -   DROP: Elimina permanentemente una tabla o base de datos completa.
+        -   CREATED: Crea nuevas bases de datos, tablas o índices.[^8]
 
--   INSERT: Añade nuevos registros a una tabla.
+## Ciencia de Datos y Machine Learning
 
--    UPDATED: Cambia datos que ya existen (por ejemplo, corregir un precio).
+-   **Métodos computacionales**: Los métodos computacionales son herramientas algorítmicas y modelos matemáticos que permiten a la ciencia de datos procesar volúmenes masivos de información de manera escalable y automatizada. Su aplicación fundamental reside en el aprendizaje automático para generar predicciones, el uso de simulaciones virtuales para evaluar escenarios complejos y la gestión de la incertidumbre mediante enfoques probabilísticos, facilitando así la extracción de patrones significativos en entornos de **Big Data** a través de lenguajes y bibliotecas especializadas.
 
--    DELETED: Borra registros específicos.
+-   **Machine learning (ML)**: Es una disciplina dentro del campo de la inteligencia que dota a los ordenadores de algoritmos capaces de identificar patrones en datos masivos y realizar predicciones (Análisis predictivo). El aprendizaje permite a los computadores realizar tareas de forma autónoma. Los algoritmos de Machine learning se dividen en tres categorías:
 
-3.   Lenguaje de Definición de Datos (DDL) Se encargan de crear y modificar la estructura de la base de datos. Los comandos más utilizados son:
+    1.  **Aprendizaje supervisado**: Son algoritmos que cuentan con un aprendizaje previo basado en un sistema de etiquetas asociadas a unos datos que les permiten tomar decisiones o hacer predicciones
 
--   ALTER:  Modifica la estructura de una tabla existente.
+    2.  **Aprendizaje no supervisado**: Son algoritmos que no cuentan con un conocimiento previo, trabajan en base al caos de los datos con el objetivo de encontrar patrones que permitan organizarlos de alguna manera
 
--   DROP: Elimina permanentemente una tabla o base de datos completa.
+    3.  **Aprendizaje por refuerzo**: Son algoritmos que aprenden a partir de la propia experiencia. Esto es, que sea capaz de tomar la mejor decisión ante diferentes situaciones de acuerdo a un proceso de prueba y error en el que se recompensan las decisiones correctas. En la actualidad se está utilizando para posibilitar el reconocimiento facial, hacer diagnósticos médicos o clasificar secuencias de ADN. La disciplina de machine learning está estrechamente entrelazada con la de ciencia de datos. En cierto sentido, el machine learning puede entenderse como una colección de algoritmos y técnicas para automatizar el análisis de datos y (lo que es más importante) aplicar los aprendizajes de ese análisis a la ejecución autónoma de tareas relevantes.
 
--   CREATED: Crea nuevas bases de datos, tablas o índices.
+## Herramientas y Ecosistema de R
 
-<!-- -->
+-   **Rstudio**: RStudio es un entorno de desarrollo integrado (IDE) disponible para R, el cual tiene un buen editor con resaltado de sintaxis, un visor de objetos de R y un gran número de características agradables que están integradas. Además, está dedicado a la computación estadística y gráficos.
 
--   **Machine learning(ML):** Es una disciplina dentro del campo de la inteligencia que dota a los ordenadores de algoritmos capaces de identificar patrones en datos masivos y realizar predicciones (Análisis predictivo). El aprendizaje permite a los computadores realizar tareas de forma autónoma.\
-    Los algoritmos de Machine learning se dividen en tres categorías\
+-   **Librería (Paquete)**: Las librerías o también conocida como paquetes son colecciones de funciones, datos y documentación que extiende la funcionalidad básica del lenguaje utilizado en el presente trabajo se usarán los siguientes paquetes:
 
-    1)  Aprendizaje supervisado: Son algoritmos que cuentan con un aprendizaje previo basado en un sistema de etiquetas asociadas a unos datos que les permiten tomar decisiones o hacer predicciones\
-    2)  Aprendizaje no supervisado: Son algoritmos que no cuentan con un conocimiento previo, trabajan en base al caos de los datos con el objetivo de encontrar patrones que permitan organizarlos de alguna manera\
-    3)  Aprendizaje por refuerzo: Son algoritmos que aprenden a partir de la propia experiencia. Esto es, que sea capaz de tomar la mejor decisión ante diferentes situaciones de acuerdo a un proceso de prueba y error en el que se recompensan las decisiones correctas. En la actualidad se está utilizando para posibilitar el reconocimiento facial, hacer diagnósticos médicos o clasificar secuencias de ADN.\
-        La disciplina de machine learning está estrechamente entrelazada con la de ciencia de datos. En cierto sentido, el machine learning puede entenderse como una colección de algoritmos y técnicas para automatizar el análisis de datos y (lo que es más importante) aplicar los aprendizajes de ese análisis a la ejecución autónoma de tareas relevantes.
+    -   **tidyverse**: Permiten preparar, procesar y graficar bases de datos.
+    -   **renv**: Ayuda a crear entornos reproducibles para proyectos en R[^9]
+    -   **janitor**: Limpieza de nombres y tablas
+    -   **skimr**: Exploración rápida de datos
+    -   **lubridate**: Manejo de fechas
+    -   **readxl**: Importar Excel
+    -   **writexl**: Exportar Excel
+    -   **data.table**: Manipulación rápida de grandes datasets
+    -   **scales**: Escalas para gráficos
+    -   **patchwork**: Combinar gráficos ggplot
+    -   **ggthemes**: Temas adicionales para gráficos.
 
--   **Estadística:** Es una rama de las matemáticas aplicadas que estudia la variabilidad de los fenomenos y procesos aleatorios. Encargada de recopilar, organizar, analizar, interpretar y presentar datos para transformar información compleja en conclusiones significativas. A grandes rasgos existen 2 tipos de estadística:\
-    \
+-   **Rproject - entornos de desarrollo**: Un entorno de desarrollo es el conjunto de herramientas, software y configuraciones que un programador utiliza para escribir, probar y depurar código de manera eficiente. En lugar de usar un simple bloc de notas, se utiliza un **IDE** (Entorno de Desarrollo Integrado), que es un programa especializado que incluye: **Editor de texto** (con colores que resaltan la sintaxis), **Consola** (para ejecutar el código al instante), **Depurador** (para encontrar y corregir errores) y **Gestor de archivos** (para ver las carpetas del proyecto). En el caso de R el entorno de desarrollo es RStudio. Por otra parte, un **RProject** es una funcionalidad dentro del entorno de RStudio que organiza el trabajo en unidades autónomas al generar un archivo con extensión .Rproj en una carpeta específica. Su función principal es gestionar automáticamente el directorio de trabajo, lo que garantiza que todas las rutas de archivos sean relativas a esa ubicación y permite que el proyecto sea totalmente portable entre diferentes computadoras sin necesidad de ajustar configuraciones internas. Al abrirlo, el sistema restaura el estado previo de la sesión, incluyendo el historial y las pestañas abiertas, asegurando que los datos y procesos de un análisis no se mezclen con otros y facilitando así un flujo de trabajo ordenado y reproducible.
 
--   **Estadistica descriptiva:** Se dedica a la descripción, visualización y resumen de datos originados a partir de los fenómenos de estudio. Los datos pueden ser resumidos numérica o gráficamente. Su objetivo es organizar y describir las características sobre un conjunto de datos con el propósito de facilitar su aplicación, generalmente con el apoyo de gráficas, tablas o medidas numéricas.\
-    \
+-   **Shinydashboard**: Un shinydashboard es una extensión del paquete **Shiny** para R diseñada específicamente para construir tableros de control profesionales (**dashboards**). Su función es organizar visualizaciones de datos y métricas en una interfaz estructurada y elegante, basada en un diseño de tres secciones principales: un encabezado (**header**), una barra lateral de navegación (**sidebar**) y un cuerpo central (**body**) donde se alojan los gráficos y tablas.
 
--   **Estadistica inferencial:** Se dedica a la generación de los modelos, inferencias y predicciones asociadas a los fenómenos en cuestión teniendo en cuenta la aleatoriedad de las observaciones. Se usa para modelar patrones en los datos y extraer inferencias acerca de la población bajo estudio. Estas inferencias pueden tomar la forma de respuestas a preguntas sí/no (prueba de hipótesis), estimaciones de unas características numéricas (estimación), pronósticos de futuras observaciones, descripciones de asociación (correlación) o modelamiento de relaciones entre variables (análisis de regresión). Otras técnicas de modelamiento incluyen análisis de varianza, series de tiempo y minería de datos. Su objetivo es obtener conclusiones útiles para lograr hacer deducciones acerca de la totalidad de las observaciones hechas, basándose en la información numérica. 
+-   **Tidymodels**: Usaremos el paquete de Tidyverse que es una colección de paquetes de R que permiten preparar, procesar y graficar bases de datos. Para modelos de ML supervisados **rsample** (Division de datos), **recipes** (procesamiento de datos, crear variables, estandarizar variables), **parsnip** (Especificación de modelos estadísticos; regresión, regresión logística, árboles de decisión, entre otros), **workflows** (agrupa en un único objeto la receta de preprocesamiento y la especificación del modelo, garantizando la consistencia entre el entrenamiento y la predicción. Este enfoque empaqueta transformaciones y algoritmos, previniendo errores comunes al aplicar pasos de preparación a nuevos datos de manera reproducible), **yardstick** (Calcular métricas y mide el error del modelo), **skimr** (permite hacer un EDA general).[^10]
 
--   **Métodos computacionales:** Los métodos computacionales son herramientas algorítmicas y modelos matemáticos que permiten a la ciencia de datos procesar volúmenes masivos de información de manera escalable y automatizada. Su aplicación fundamental reside en el aprendizaje automático para generar predicciones, el uso de simulaciones virtuales para evaluar escenarios complejos y la gestión de la incertidumbre mediante enfoques probabilísticos, facilitando así la extracción de patrones significativos en entornos de Big Data a través de lenguajes y bibliotecas especializadas. 
+------------------------------------------------------------------------
 
--   **Rstudio**: RStudio es un entorno de desarrollo integrado (IDE) disponible para R, el cual tiene un buen editor con resaltado de sintaxis, un visor de objetos de R y un gran número de características agradables que están integradas.Además, está dedicado a la computación estadística y gráficos.
+## Referencias
 
--   **Librería (Paquete)**: Las librerías o también conocida como paquetes son colecciones de funciones, datos y documentación que extiende la funcionalidad básica del lenguaje utilizado en el presente trabajo se usarán los siguientes paquetes:\
-
-    -   tidyverse: Permiten preparar, procesar y graficar bases de datos.\
-    -   renv: Ayuda a crear entornos reproducibles para proyectos en R\
-    -   janitor: Limpieza de nombres y tablas\
-    -   skimr: Exploración rápida de datos\
-    -   lubridate: Manejo de fechas\
-    -   readxl: Importar Excel\
-    -   writexl:Exportar Excel\
-    -   data.table: Manipulación rápida de grandes datasets\
-    -   scales: Escalas para gráficos\
-    -   patchwork: Combinar gráficos ggplot\
-    -   ggthemes: Temas adicionales para gráficos.
-
--   **Programación Orientada a Objetos**: La Programación Orientada a Objetos es un paradigma que organiza el desarrollo de software mediante la creación de objetos, los cuales actúan como unidades que combinan datos (atributos) y comportamientos (métodos) para representar elementos del mundo real. A diferencia de la programación tradicional basada en pasos lógicos, este modelo utiliza clases como moldes para estructurar el código, apoyándose en pilares como la abstracción, el encapsulamiento, la herencia y el polimorfismo. Su objetivo principal es facilitar la reutilización de código, mejorar la escalabilidad y permitir que sistemas complejos sean más fáciles de mantener al segmentar la lógica en componentes independientes y funcionales. 
-
--   **Niveles de los lenguajes de programación(Alto,bajo,etc)**: Los niveles de los lenguajes de programación se clasifican según su proximidad al hardware o al lenguaje humano, dividiéndose principalmente en tres categorías: los lenguajes de bajo nivel, que operan directamente sobre el hardware y los componentes físicos de la computadora; los lenguajes de nivel medio, que ofrecen una sintaxis más legible y abstracta sin perder la capacidad de gestionar manualmente la memoria; y los lenguajes de alto nivel, que son independientes de la arquitectura de la máquina y automatizan procesos complejos como la gestión de memoria para priorizar la facilidad de uso. Algunos ejemplo de lenguajes por nivel son:
-
-1.  Bajo nivel: Lenguaje Ensamblador 
-
-2.  Nivel medio: C, C++ 
-
-3.  Alto nivel: Python, R, Java 
-
--   Rproject - entornos de desarrollo: Un entorno de desarrollo es el conjunto de herramientas, software y configuraciones que un programador utiliza para escribir, probar y depurar código de manera eficiente. En lugar de usar un simple bloc de notas, se utiliza un IDE (Entorno de Desarrollo Integrado), que es un programa especializado que incluye: 
-
-1.  Editor de texto: Con colores que resaltan la sintaxis.
-
-2.  Consola: Para ejecutar el código al instante.
-
-3.  Depurador: Para encontrar y corregir errores.
-
-4.  Gestor de archivos: Para ver las carpetas del proyecto.
-
-En el caso de R el entorno de desarrollo es RStudio.
-
-Por otra parte, un RProject es una funcionalidad dentro del entorno de RStudio que organiza el trabajo en unidades autónomas al generar un archivo con extensión .Rproj en una carpeta específica. Su función principal es gestionar automáticamente el directorio de trabajo, lo que garantiza que todas las rutas de archivos sean relativas a esa ubicación y permite que el proyecto sea totalmente portable entre diferentes computadoras sin necesidad de ajustar configuraciones internas. Al abrirlo, el sistema restaura el estado previo de la sesión, incluyendo el historial y las pestañas abiertas, asegurando que los datos y procesos de un análisis no se mezclen con otros y facilitando así un flujo de trabajo ordenado y reproducible.
-
--   **Shinydashboard**: Un shinydashboard es una extensión del paquete Shiny para R diseñada específicamente para construir tableros de control profesionales (dashboards). Su función es organizar visualizaciones de datos y métricas en una interfaz estructurada y elegante, basada en un diseño de tres secciones principales: un encabezado (header), una barra lateral de navegación (sidebar) y un cuerpo central (body) donde se alojan los gráficos y tablas.
-
-**Tidymodels**: Usaremos el paquete de Tidyverse que es una colección de paquetes de R que permiten preparar, procesar y graficar bases de datos. Para modelos de ML supervisados rsample(Division de datos), recipes(procesamiento de datos, crear variables, estandarizar variables), parsnip(Especificación de modelos estadísticos; regresión,regresión logística, árboles de decisión,entre otros), workflows(agrupa en un único objeto la receta de preprocesamiento y la especificación del modelo, garantizando la consistencia entre el entrenamiento y la predicción. Este enfoque empaqueta transformaciones y algoritmos, previniendo errores comunes al aplicar pasos de preparación a nuevos datos de manera reproducible), yardstick (Calcular métricas y mide el error del modelo),skimr(permite hacer un EDA general).
+[^1]: Para ver más funciones de git push y pull ver: [Mastering Git: A Comprehensive Guide to git pull and git push](https://dev-to.translate.goog/alexmercedcoder/mastering-git-a-comprehensive-guide-to-git-pull-and-git-push-2eo3?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=sge#:~:text=Sección%202:%20Dominando%20git%20push,integridad%20del%20historial%20del%20proyecto)
+[^2]: Como hacer un Fork y definición: [Aprende GIT](https://aprendegit.com/fork-de-repositorios-para-que-sirve/);[GitHub - Participando en Proyectos](https://git-scm.com/book/es/v2/GitHub-Participando-en-Proyectos).
+[^3]: Branch en github: [Acerca de las ramas documentos github](https://docs.github.io/es/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches).
+[^4]: Matemáticas aplicadas: Métodos y herramientas matemáticos que pueden ser utilizados en el análisis o resolución de problemas pertenecientes al área de las ciencias básicas o aplicadas como el cálculo, el álgebra lineal, las ecuaciones diferenciales y otros procedimientos ideados desde que se acuñó el concepto. 
+[^5]: EDA definición: [analisis exploratorio de datos](https://www.jmp.com/es/statistics-knowledge-portal/exploratory-data-analysis#:~:text=¿Qué%20es%20el%20análisis%20exploratorio,aprender%2C%20no%20confirmar%20hipótesis%20estadísticas).
+[^6]: Tipos de EDA: [Análisis exploratorio: Definición, tipos y herramientas](https://forms.app/es/blog/analisis-exploratorio).
+[^7]: Véase más información en: [¿Qué es SQL (lenguaje de consulta estructurada)?](https://aws.amazon.com/es/what-is/sql/#:~:text=es%20importante%20SQL?-,El%20lenguaje%20de%20consulta%20estructurada%20(SQL)%20es%20un%20lenguaje%20de,los%20diferentes%20lenguajes%20de%20programación).
+[^8]: Véase más comandos en: [Los comandos SQL más importantes](https://learnsql.es/blog/los-comandos-sql-mas-importantes/).
+[^9]: Véase más información en: [Introducción al renv](https://rstudio.github.io/renv/articles/renv.html).
+[^10]: Carga de paquetes y usos de Tidymodels: [Usando R para Machine Learning con tidymodels](https://www.youtube.com/watch?v=IZ45jAFcmFU&t=2567s).
