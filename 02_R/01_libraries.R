@@ -1,11 +1,10 @@
-# =====================================================
-# 1. CARGA DE LIBRERIAS
-# =====================================================
+# Instalacion base librerias ----------------------------------------------
 
 install.packages("pacman")
 install.packages("renv") #para manejar reproducibilidad
 
-# Cargar librerías
+# Cargar librerias --------------------------------------------------------
+
 pacman::p_load(
   tidyverse,   # Manipulación y visualización (dplyr, ggplot2, etc.)
   janitor,     # Limpieza de nombres y tablas
@@ -19,14 +18,3 @@ pacman::p_load(
   ggthemes,     # Temas adicionales para gráficos
   renv         # libreria que documenta versiones de librerias 
 )
-
-
-
-# 2. REPRODUCIBILIDAD -----------------------------------------------------
-
-renv::init() #Inicializar el entorno con librerias y variables.
-
-# Más info: https://posit.co/blog/renv-project-environments-for-r/
-
-renv::snapshot() #Este comando guarda versiones de librerias usadas y crea
-# el archivo renv.lock

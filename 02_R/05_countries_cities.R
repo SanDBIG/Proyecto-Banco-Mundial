@@ -1,7 +1,7 @@
 
 # Paises ------------------------------------------------------------------
 
-unique(data_raw$`Country Name`)
+# unique(data_raw$`Country Name`)
 
 paises <- split(data_raw, data_raw$`Country Name`)
 
@@ -197,12 +197,6 @@ West_Bank_and_Gaza <- paises$`West Bank and Gaza`
 Yemen_Rep <- paises$`Yemen, Rep.`
 Zambia  <- paises$Zambia                           
 Zimbabwe <- paises$Zimbabwe          
-
-
-
-
-
-
 
 
 # Ciudades ----------------------------------------------------------------

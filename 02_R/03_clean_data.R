@@ -1,19 +1,5 @@
 
-# Primeros 94 -------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-# Ultimos 94 --------------------------------------------------------------
-
+# DATA LIMPIA -------------------------------------------------------------
 
 data_clean <- data_raw %>%
   slice(1:(n() - 5)) %>%  # eliminar últimas 5 filas
@@ -29,20 +15,20 @@ data_clean <- data_raw %>%
 
 # REVISIÓN RECOMENDADA PARA OBJETOS ---------------------------------------
 
-str(data_clean) #Estructura de variables del objeto
-sapply(data_clean, class) # tipos de variables(funciona mejor)
-glimpse(data_clean) #Tipos de variables, más detallado
-colSums(is.na(data_clean)) #cantidad de valores por columna
+# str(data_clean) #Estructura de variables del objeto
+# sapply(data_clean, class) # tipos de variables(funciona mejor)
+# glimpse(data_clean) #Tipos de variables, más detallado
+# colSums(is.na(data_clean)) #cantidad de valores por columna
 
 
 # REVISIONES ADICIONALES PARA OBJETO}--------------------------------------
 
-sum(is.na(data_clean)) #detección de NA
-sapply(data_clean, is.numeric) #Detectar si las columnas son númericas (Boleano)
-lapply(data_clean, unique) #revisión de valores unicos por columna
-unique(data_clean$`Country Name`) #Revisión de valores unicos por columna
-summary(data_clean) #Detalles por columna
-table(sapply(data_clean, class)) # Conteo de tipos de variables
+# sum(is.na(data_clean)) #detección de NA
+# sapply(data_clean, is.numeric) #Detectar si las columnas son númericas (Boleano)
+# lapply(data_clean, unique) #revisión de valores unicos por columna
+# unique(data_clean$`Country Name`) #Revisión de valores unicos por columna
+# summary(data_clean) #Detalles por columna
+# table(sapply(data_clean, class)) # Conteo de tipos de variables
 
 
 
@@ -59,7 +45,7 @@ data_clean <- data_clean %>%
     as.numeric
   ))
 
-sapply(data_clean, class) #Comprobar si fueron transformadas
+#sapply(data_clean, class) #Comprobar si fueron transformadas
 
 
 # NOTA TÉCNICA ------------------------------------------------------------
@@ -77,7 +63,7 @@ sapply(data_clean, class) #Comprobar si fueron transformadas
 
 # TRANSFORMAR A LONG ------------------------------------------------------
 
-data_clean <- data_clean %>% 
+data_clean_long <- data_clean %>% 
   pivot_longer(
     cols = matches("^\\d{4}$"),
     names_to = "Year",
@@ -87,6 +73,6 @@ data_clean <- data_clean %>%
     Year = as.numeric(Year)
   )
 
-glimpse(data_clean) #Verificacion
-sapply(data_clean, class) #Verificacion
+# glimpse(data_clean) #Verificacion
+# sapply(data_clean, class) #Verificacion
 

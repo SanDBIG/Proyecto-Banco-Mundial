@@ -1,9 +1,6 @@
-# =====================================================
-# 00_setup.R
-# Configuración inicial del proyecto
-# =====================================================
 
-# Crear estructura de carpetas del proyecto
+# Estructura del proyecto -------------------------------------------------
+
 folders <- c(
   "00_docs",
   "01_data/01_raw",
