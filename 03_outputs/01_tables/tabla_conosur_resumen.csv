@@ -1,0 +1,7 @@
+Country Name,Series Name,anios_con_dato,primer_anio,ultimo_anio,valor_inicial,valor_final,variacion_abs,promedio,minimo,maximo
+Argentina,Dealing with construction permits: Time (days),15,2005,2019,365,318,-47,362.03333333333336,318,366.5
+Argentina,Starting a business - Score,17,2003,2019,63.74967,80.43345,16.68377999999999,72.85913588235294,63.74967,81.99463
+Chile,Dealing with construction permits: Time (days),15,2005,2019,252,195,-57,217.8,195,252
+Chile,Starting a business - Score,17,2003,2019,75.97929,91.42747,15.448179999999994,82.6161005882353,75.97929,91.42747
+Uruguay,Dealing with construction permits: Time (days),15,2005,2019,265,265,0,265,265,265
+Uruguay,Starting a business - Score,17,2003,2019,54.4291,89.59999,35.17089000000001,75.9991494117647,54.4291,89.89789
