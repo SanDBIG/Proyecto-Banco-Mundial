@@ -1,7 +1,6 @@
 # Instalacion base librerias ----------------------------------------------
 
 install.packages("pacman")
-install.packages("renv") #para manejar reproducibilidad
 
 # Cargar librerias --------------------------------------------------------
 
@@ -16,5 +15,8 @@ pacman::p_load(
   scales,      # Escalas para gráficos
   patchwork,   # Combinar gráficos ggplot
   ggthemes,     # Temas adicionales para gráficos
-  renv         # libreria que documenta versiones de librerias 
+  renv,         # libreria que documenta versiones de librerias 
+  shiny, # creacion de aplicaciones interactivas/dashboard
+  DT, # crea tablas navegables
+  renv # para manejar reproducibilidad
 )
