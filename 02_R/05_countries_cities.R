@@ -1,26 +1,37 @@
+########################################################################
+# Se pasa todo este codigo a clean data para facilitar nombres de paises  --------
+########################################################################
+
+
+
 
 # Paises ------------------------------------------------------------------
 
 # unique(data_raw$`Country Name`)
 
-paises <- split(data_raw, data_raw$`Country Name`)
-
-# exploración de la estructura de la lista
-str(paises) # estructura general de la lista
-names(paises) # nombres de los elementos
-length(paises) # cantidad de elementos
-head(paises) # ver primeros 5 elementos
-summary(paises) # resumen de la lista
-sapply(paises, class) # Tipo de cada elemento de la lista
-sapply(paises, dim) # dimensiones si contiene df's, matrices u otros objetos tabulares
-sapply(paises, nrow) # número de filas
-sapply(paises, ncol) # número de columnas
-
-lapply(paises, names) # ver nombre de las columnas decada DF
-lapply(paises, head) # ver prifmeras filas de cada DF
-lapply(paises, str) # vere structurar de cada DF
-
-
+# se corrige que paises debe partir de data_clean
+# se corrige para arrancar como df y no como lista
+# 
+# paises <- data_clean %>% 
+#   group_by(`Country Name`) #para agrugar sin crear variables se usa backticks ``
+# 
+# names(paises)
+# 
+# # exploración de la estructura de DF
+# str(paises) # estructura general de la df
+# names(paises) # nombres de los elementos
+# length(paises) # cantidad de elementos
+# head(paises) # ver primeros 5 elementos
+# summary(paises) # resumen de la lista
+# sapply(paises, class) # Tipo de cada elemento de la lista
+# sapply(paises, dim) # dimensiones si contiene df's, matrices u otros objetos tabulares
+# sapply(paises, nrow) # número de filas
+# sapply(paises, ncol) # número de columnas
+# 
+# lapply(paises, names) # ver nombre de las columnas decada DF
+# lapply(paises, head) # ver prifmeras filas de cada DF
+# lapply(paises, str) # ver estructura de cada DF
+# 
 
 # Afghanistan <- paises$Afghanistan
 # Albania <- paises$Albania
