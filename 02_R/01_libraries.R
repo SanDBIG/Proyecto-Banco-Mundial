@@ -1,6 +1,8 @@
 # Instalacion base librerias ----------------------------------------------
 
-install.packages("pacman")
+if (!requireNamespace("pacman", quietly = TRUE)) {
+  install.packages("pacman")
+}
 
 # Cargar librerias --------------------------------------------------------
 
