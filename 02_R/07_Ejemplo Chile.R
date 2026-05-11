@@ -1,6 +1,5 @@
-# ==========================================
-# EDA simple - Una variable de Chile
-# ==========================================
+
+# Visualizacion de una  variable de Chile ---------------------------------
 
 # 1 filtrar Chile
 chile <- data_raw %>%

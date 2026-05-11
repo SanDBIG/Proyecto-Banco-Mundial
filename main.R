@@ -9,6 +9,6 @@ source("02_R/04_eda.R")
 # Creacion de tablas y graficos estaticos
 source("02_R/06_graphs-visuals.R")
 # Creacion de dashboard shiny
-source("02_R/Dashboard.R")
+source("02_R/08_Dashboard.R")
 # Creacion de quarto
 source("")
