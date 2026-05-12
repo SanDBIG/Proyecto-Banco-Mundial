@@ -1,6 +1,15 @@
 
 # Construcción del dashboard ----------------------------------------------
 
+
+# Carga independiente de librerias para deploy de dashboard ---------------
+
+library(shiny)
+library(DT)
+library(dplyr)
+library(ggplot2)
+
+
 # CARGAR OBJETOS PARA DASHBOARD ----------------------------------------------
 
 data_conosur <- readRDS("03_outputs/04_datasource/data_conosur.rds")

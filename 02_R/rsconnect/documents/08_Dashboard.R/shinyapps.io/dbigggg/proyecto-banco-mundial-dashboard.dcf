@@ -1,0 +1,10 @@
+name: proyecto-banco-mundial-dashboard
+title:
+username: dbigggg
+account: dbigggg
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 17348840
+bundleId: 11986015
+url: https://dbigggg.shinyapps.io/proyecto-banco-mundial-dashboard/
+version: 1
