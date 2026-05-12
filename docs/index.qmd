@@ -8,7 +8,7 @@ editor: source
 ---
 
 <p>
-  <a href="URL_DE_TU_APP_SHINY_AQUI" target="_blank" style="text-decoration: none;">
+  <a href="https://dbigggg.shinyapps.io/proyecto-banco-mundial-dashboard/" target="_blank" style="text-decoration: none;">
     <button type="button" class="btn btn-primary btn-lg">Ver Dashboard Interactivo</button>
   </a>
 </p>

@@ -1,0 +1,12 @@
+project:
+  type: website
+  render:
+    - index.qmd
+
+website:
+  title: "Proyecto Banco Mundial"
+
+format:
+  html:
+    theme: cosmo
+    toc: true
