@@ -129,7 +129,17 @@ ggsave(
   bg = "white"
 )
 
+# EXPORTAR OBJETOS PARA DASHBOARD --------------------------------------------
 
+saveRDS(
+  data_conosur,
+  file = "03_outputs/04_datasource/data_conosur.rds"
+)
+
+saveRDS(
+  tabla_conosur_resumen,
+  file = "03_outputs/04_datasource/tabla_conosur_resumen.rds"
+)
 
 
 

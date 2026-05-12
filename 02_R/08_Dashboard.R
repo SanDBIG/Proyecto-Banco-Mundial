@@ -1,6 +1,12 @@
 
 # Construcción del dashboard ----------------------------------------------
 
+# CARGAR OBJETOS PARA DASHBOARD ----------------------------------------------
+
+data_conosur <- readRDS("03_outputs/04_datasource/data_conosur.rds")
+
+tabla_conosur_resumen <- readRDS("03_outputs/04_datasource/tabla_conosur_resumen.rds")
+
 
 # TABLA PARA DASHBOARD --------------------------------------------------------
 
@@ -78,6 +84,7 @@ grafico_starting <- data_conosur %>%
 
 
 # UI --------------------------------------------------------------------------
+# Define lo que se ve en pantalla: controles, tabla y gráficos.
 
 ui <- fluidPage(
   
@@ -101,7 +108,7 @@ ui <- fluidPage(
       wellPanel(
         style = "padding: 8px; margin-bottom: 10px;",
         
-        # Fila interna para distribuir los controles dentro de la botonera.
+        # Fila interna para distribuir los controles.
         fluidRow(
           
           # Control del rango de años.
@@ -120,7 +127,6 @@ ui <- fluidPage(
           ),
           
           # Control de selección de países.
-          # width = 5 ocupa un poco más de espacio horizontal.
           # inline = TRUE deja las opciones en una misma línea.
           column(
             width = 5,
@@ -133,9 +139,7 @@ ui <- fluidPage(
             )
           ),
           
-          # Control para mostrar u ocultar etiquetas numéricas en los gráficos.
-          # width = 3 completa la fila.
-          # 4 + 5 + 3 = 12.
+          # Control para mostrar u ocultar etiquetas numéricas.
           column(
             width = 3,
             checkboxInput(
@@ -161,10 +165,8 @@ ui <- fluidPage(
       width = 12,
       h4("Tabla resumen"),
       
-      # div permite controlar el tamaño vertical de la tabla.
-      # max-height define el alto máximo del contenedor.
-      # overflow-y permite scroll vertical si la tabla excede ese alto.
-      # margin-bottom separa la tabla de los gráficos.
+      # max-height controla el alto máximo de la tabla.
+      # overflow-y agrega scroll vertical si la tabla supera ese alto.
       div(
         style = "max-height: 220px; overflow-y: auto; margin-bottom: 15px;",
         DTOutput("tabla_resumen")
@@ -179,16 +181,14 @@ ui <- fluidPage(
   
   fluidRow(
     
-    # width = 6 hace que el primer gráfico ocupe la mitad izquierda.
-    # height controla el alto del gráfico en pantalla.
+    # width = 6 deja este gráfico en la mitad izquierda.
     column(
       width = 6,
       h4("Construction permits"),
       plotOutput("grafico_permisos", height = "500px")
     ),
     
-    # width = 6 hace que el segundo gráfico ocupe la mitad derecha.
-    # 6 + 6 = 12, por eso ambos quedan en una misma fila.
+    # width = 6 deja este gráfico en la mitad derecha.
     column(
       width = 6,
       h4("Starting a business"),
@@ -197,7 +197,9 @@ ui <- fluidPage(
   )
 )
 
+
 # SERVER ----------------------------------------------------------------------
+# Define cómo se actualizan la tabla y los gráficos según los controles.
 
 server <- function(input, output) {
   
@@ -215,26 +217,19 @@ server <- function(input, output) {
       
       options = list(
         
-        # Número de filas visibles en la tabla.
-        # Como la tabla está dispuesta horizontalmente y angosta,
-        # conviene mostrar pocas filas.
+        # Número de filas visibles.
         pageLength = 3,
         
-        # Activa scroll horizontal para no deformar el dashboard
-        # cuando hay muchas columnas.
+        # Scroll horizontal para tablas con muchas columnas.
         scrollX = TRUE,
         
         # Alto interno de la tabla.
-        # Si quieres una tabla más alta, sube este valor.
-        # Si quieres una tabla más angosta, bájalo.
         scrollY = "120px",
         
-        # Controla qué elementos muestra la tabla.
-        # f = filtros
+        # f = buscador/filtros
         # t = tabla
         # i = información inferior
         # p = paginación
-        # Se excluye "l" para ocultar el selector de número de filas.
         dom = "ftip"
       )
     )
@@ -247,8 +242,7 @@ server <- function(input, output) {
   
   output$grafico_permisos <- renderPlot({
     
-    # Se usa data_conosur ya construido.
-    # Aquí solo se filtra dinámicamente según los controles del dashboard.
+    # Filtra dinámicamente según países y rango de años.
     p <- data_conosur %>%
       filter(
         `Series Name` == "Dealing with construction permits: Time (days)",
@@ -262,19 +256,11 @@ server <- function(input, output) {
         color = `Country Name`,
         group = `Country Name`
       )) +
-      
-      # Línea temporal por país.
       geom_line(linewidth = 0.9, na.rm = TRUE) +
-      
-      # Puntos por año.
       geom_point(size = 1.8, na.rm = TRUE) +
-      
-      # Eje X dinámico según el rango de años seleccionado.
       scale_x_continuous(
         breaks = seq(input$rango_anios[1], input$rango_anios[2], 2)
       ) +
-      
-      # Etiquetas generales del gráfico.
       labs(
         title = "Dealing with construction permits: Time (days)",
         subtitle = "Chile, Argentina y Uruguay, 2003-2019",
@@ -282,13 +268,9 @@ server <- function(input, output) {
         y = "Días",
         color = "País"
       ) +
-      
-      # Tema visual base.
       theme_minimal()
     
-    
-    # Si el usuario activa "Mostrar valores",
-    # se agregan etiquetas numéricas con un decimal.
+    # Agrega etiquetas si el checkbox está activado.
     if (input$mostrar_valores) {
       p <- p +
         geom_text(
@@ -300,7 +282,6 @@ server <- function(input, output) {
         )
     }
     
-    # Devuelve el gráfico final.
     p
   })
   
@@ -311,8 +292,7 @@ server <- function(input, output) {
   
   output$grafico_starting <- renderPlot({
     
-    # Se usa data_conosur ya construido.
-    # Aquí solo se filtra dinámicamente según los controles del dashboard.
+    # Filtra dinámicamente según países y rango de años.
     p <- data_conosur %>%
       filter(
         `Series Name` == "Starting a business - Score",
@@ -326,19 +306,11 @@ server <- function(input, output) {
         color = `Country Name`,
         group = `Country Name`
       )) +
-      
-      # Línea temporal por país.
       geom_line(linewidth = 0.9, na.rm = TRUE) +
-      
-      # Puntos por año.
       geom_point(size = 1.8, na.rm = TRUE) +
-      
-      # Eje X dinámico según el rango de años seleccionado.
       scale_x_continuous(
         breaks = seq(input$rango_anios[1], input$rango_anios[2], 2)
       ) +
-      
-      # Etiquetas generales del gráfico.
       labs(
         title = "Starting a business - Score",
         subtitle = "Chile, Argentina y Uruguay, 2003-2019",
@@ -346,13 +318,9 @@ server <- function(input, output) {
         y = "Score",
         color = "País"
       ) +
-      
-      # Tema visual base.
       theme_minimal()
     
-    
-    # Si el usuario activa "Mostrar valores",
-    # se agregan etiquetas numéricas con un decimal.
+    # Agrega etiquetas si el checkbox está activado.
     if (input$mostrar_valores) {
       p <- p +
         geom_text(
@@ -364,10 +332,12 @@ server <- function(input, output) {
         )
     }
     
-    # Devuelve el gráfico final.
     p
   })
 }
+
+
 # APP -------------------------------------------------------------------------
+# Ejecuta el dashboard.
 
 shinyApp(ui = ui, server = server)
