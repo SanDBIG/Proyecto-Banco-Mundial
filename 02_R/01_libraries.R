@@ -20,5 +20,6 @@ pacman::p_load(
   renv,         # libreria que documenta versiones de librerias 
   shiny, # creacion de aplicaciones interactivas/dashboard
   DT, # crea tablas navegables
-  renv # para manejar reproducibilidad
+  renv, # para manejar reproducibilidad
+  rsconnect # esto es para conectar a los servicios de shiny
 )
