@@ -1,9 +1,7 @@
 
 # Conexión a shinyapps.io -------------------------------------------------
 
-rsconnect::setAccountInfo(name='dbigggg',
-                          token='45B5AF9C9D27422C0B7F7428FED876BA',
-                          secret='zf7AETeQBWRH/AeyhrrUWTVpU6Q7F6TzRomGvXEZ')
+# Recordar token aqui
 
 rsconnect::deployApp(
   appDir = ".",
