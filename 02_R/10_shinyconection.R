@@ -1,7 +1,11 @@
 
 # Conexión a shinyapps.io -------------------------------------------------
 
-# Recordar token aqui
+# Recordar token aqui, por resguardo se acciona directamente en consola
+# y después se ejecuta el siguiente script.
+
+# la parte de gitub pages debe lanzarse con el repo en modo público,
+# en modo privado no funciona para poder lanzarlo.
 
 rsconnect::deployApp(
   appDir = ".",
