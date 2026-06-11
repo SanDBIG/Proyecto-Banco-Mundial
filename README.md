@@ -87,13 +87,13 @@ Proyecto-Banco-Mundial/
 │   ├── 04_eda.R                # Análisis exploratorio
 │   ├── 05_countries_cities.R   # Revisión de países y ciudades
 │   ├── 06_graphs-visuals.R     # Tablas y gráficos
-│   ├── 07_Ejemplo Chile.R      # Ejemplo específico para Chile
+│   ├── 07_Ejemplo Chile.R      # Ejemplo específico para Chile (exploratorio)
 │   └── 08_Dashboard.R          # Dashboard interactivo en Shiny
 ├── 03_outputs/
 │   ├── 01_tables/              # Tablas exportadas
 │   ├── 02_figures/             # Gráficos exportados
 │   └── 04_datasource/          # Objetos usados por el dashboard
-├── docs/                       # Documentación generada con Quarto
+├── docs/                       # Informe generado con Quarto
 ├── renv/                       # Entorno reproducible de R
 ├── renv.lock                   # Versiones de paquetes utilizadas
 ├── main.R                      # Script principal de ejecución
@@ -232,7 +232,8 @@ Algunas mejoras planificadas son:
 1. Agregar más indicadores del proyecto Doing Business.
 2. Robustizar el dashboard con más filtros e indicadores.
 3. Incorporar modelos de regresión para explorar asociaciones entre indicadores.
-4. Comparar periodos presidenciales o cambios de gobierno.
+4. Incorporar modelos de clasfiicación para agrupar economías.
+5. Comparar periodos presidenciales o cambios de gobierno.
 
 ## Autor
 
