@@ -246,4 +246,4 @@ Este proyecto se distribuye bajo licencia MIT.
 
 Diego Iturrieta desarrolló el flujo principal del proyecto, incluyendo la limpieza y transformación de datos, el análisis descriptivo, las visualizaciones, el dashboard interactivo y la documentación final.
 
-[Diego Martinez] (https://github.com/diegopinas) colaboró puntualmente en una etapa inicial del código, aportando una primera aproximación exploratoria que fue posteriormente revisada, ajustada y ampliada en el desarrollo final del proyecto.
+[Diego Martinez](https://github.com/diegopinas) colaboró puntualmente en una etapa inicial del código, aportando una primera aproximación exploratoria que fue posteriormente revisada, ajustada y ampliada en el desarrollo final del proyecto.
