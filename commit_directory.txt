@@ -7,3 +7,4 @@ EDA - Estadisticos básicos
 Visuals - Visualizaciones
 Output - Data limpia y organizada
 Delete - Borrar archivos (explicar por qué)
+reports - Reportes, informes y entregables
