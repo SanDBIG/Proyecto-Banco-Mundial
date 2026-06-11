@@ -84,15 +84,15 @@ kable(tabla_resumen)
 
 La tabla permite revisar:
 
-1. Cantidad de años con datos disponibles.
-2. Primer año observado.
-3. Último año observado.
-4. Valor inicial de la serie.
-5. Valor final de la serie.
-6. Variación absoluta entre el valor inicial y final.
-7. Promedio del periodo observado.
-8. Valor mínimo.
-9. Valor máximo.
+1.  Cantidad de años con datos disponibles.
+2.  Primer año observado.
+3.  Último año observado.
+4.  Valor inicial de la serie.
+5.  Valor final de la serie.
+6.  Variación absoluta entre el valor inicial y final.
+7.  Promedio del periodo observado.
+8.  Valor mínimo.
+9.  Valor máximo.
 
 Esta salida permite comparar rápidamente la evolución de cada país dentro de los indicadores seleccionados.
 
@@ -126,11 +126,11 @@ En el indicador de facilidad para iniciar un negocio, la lectura se centra en el
 
 A partir de ambos productos, el análisis descriptivo permite revisar:
 
-1. La dirección de cambio de cada país.
-2. La magnitud de la variación entre el primer y último año observado.
-3. La distancia relativa entre Chile, Argentina y Uruguay.
-4. La estabilidad o variación de cada serie.
-5. Las diferencias de cobertura temporal entre indicadores.
+1.  La dirección de cambio de cada país.
+2.  La magnitud de la variación entre el primer y último año observado.
+3.  La distancia relativa entre Chile, Argentina y Uruguay.
+4.  La estabilidad o variación de cada serie.
+5.  Las diferencias de cobertura temporal entre indicadores.
 
 Este informe no interpreta los cambios como efectos causales. Su función es presentar resultados descriptivos a partir de los datos procesados.
 
@@ -165,13 +165,13 @@ El análisis no busca explicar causalmente los cambios observados. Para avanzar 
 
 El valor principal del proyecto está en integrar un flujo de trabajo reproducible en R:
 
-1. Carga de datos.
-2. Limpieza y transformación.
-3. Selección de países e indicadores.
-4. Construcción de tabla resumen.
-5. Generación de visualización estática.
-6. Exportación de objetos para dashboard.
-7. Publicación de productos en formato web.
+1.  Carga de datos.
+2.  Limpieza y transformación.
+3.  Selección de países e indicadores.
+4.  Construcción de tabla resumen.
+5.  Generación de visualización estática.
+6.  Exportación de objetos para dashboard.
+7.  Publicación de productos en formato web.
 
 ## Cierre
 
