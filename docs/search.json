@@ -1,0 +1,65 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Indicadores Doing Business en países del Cono Sur",
+    "section": "",
+    "text": "Este informe presenta una lectura descriptiva de los principales productos generados en el proyecto de visualización de indicadores Doing Business del Banco Mundial para Chile, Argentina y Uruguay.\nEl análisis se concentra en dos indicadores:\n\n\n\n\n\n\n\n\n\nIndicador\nDescripcion\n\n\n\n\nDealing with construction permits: Time (days)\nTiempo requerido para obtener permisos de construcción, medido en días.\n\n\nStarting a business - Score\nPuntaje asociado a la facilidad para iniciar un negocio.\n\n\n\n\n\nEl objetivo de este informe es mostrar los datos procesados, la tabla resumen y la visualización estática generada por el proyecto. El documento tiene un alcance descriptivo y está pensado como complemento del dashboard interactivo."
+  },
+  {
+    "objectID": "index.html#resumen-del-informe",
+    "href": "index.html#resumen-del-informe",
+    "title": "Indicadores Doing Business en países del Cono Sur",
+    "section": "",
+    "text": "Este informe presenta una lectura descriptiva de los principales productos generados en el proyecto de visualización de indicadores Doing Business del Banco Mundial para Chile, Argentina y Uruguay.\nEl análisis se concentra en dos indicadores:\n\n\n\n\n\n\n\n\n\nIndicador\nDescripcion\n\n\n\n\nDealing with construction permits: Time (days)\nTiempo requerido para obtener permisos de construcción, medido en días.\n\n\nStarting a business - Score\nPuntaje asociado a la facilidad para iniciar un negocio.\n\n\n\n\n\nEl objetivo de este informe es mostrar los datos procesados, la tabla resumen y la visualización estática generada por el proyecto. El documento tiene un alcance descriptivo y está pensado como complemento del dashboard interactivo."
+  },
+  {
+    "objectID": "index.html#archivos-utilizados",
+    "href": "index.html#archivos-utilizados",
+    "title": "Indicadores Doing Business en países del Cono Sur",
+    "section": "2 Archivos utilizados",
+    "text": "2 Archivos utilizados\nEl informe utiliza dos archivos generados por el flujo de procesamiento del proyecto:\n\n\n\n\n\n\n\n\n\n\nArchivo\nRuta_en_el_proyecto\nUso\n\n\n\n\ntabla_conosur_resumen.csv\n03_outputs/01_tables/tabla_conosur_resumen.csv\nTabla descriptiva con valores iniciales, finales, variaciones y estadísticos básicos.\n\n\ngrafico_conosur_serie_temporal.png\n03_outputs/02_figures/grafico_conosur_serie_temporal.png\nVisualización estática de los indicadores seleccionados.\n\n\n\n\n\nComo este archivo index.qmd se encuentra dentro de la carpeta docs/, las rutas usadas en el código suben un nivel hacia la raíz del proyecto mediante ../."
+  },
+  {
+    "objectID": "index.html#tabla-resumen",
+    "href": "index.html#tabla-resumen",
+    "title": "Indicadores Doing Business en países del Cono Sur",
+    "section": "3 Tabla resumen",
+    "text": "3 Tabla resumen\nLa siguiente tabla corresponde al archivo tabla_conosur_resumen.csv. Esta salida resume cada combinación entre país e indicador mediante medidas descriptivas básicas.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCountry Name\nSeries Name\nanios_con_dato\nprimer_anio\nultimo_anio\nvalor_inicial\nvalor_final\nvariacion_abs\npromedio\nminimo\nmaximo\n\n\n\n\nArgentina\nDealing with construction permits: Time (days)\n15\n2005\n2019\n365.00000\n318.00000\n-47.00000\n362.03333\n318.00000\n366.50000\n\n\nArgentina\nStarting a business - Score\n17\n2003\n2019\n63.74967\n80.43345\n16.68378\n72.85914\n63.74967\n81.99463\n\n\nChile\nDealing with construction permits: Time (days)\n15\n2005\n2019\n252.00000\n195.00000\n-57.00000\n217.80000\n195.00000\n252.00000\n\n\nChile\nStarting a business - Score\n17\n2003\n2019\n75.97929\n91.42747\n15.44818\n82.61610\n75.97929\n91.42747\n\n\nUruguay\nDealing with construction permits: Time (days)\n15\n2005\n2019\n265.00000\n265.00000\n0.00000\n265.00000\n265.00000\n265.00000\n\n\nUruguay\nStarting a business - Score\n17\n2003\n2019\n54.42910\n89.59999\n35.17089\n75.99915\n54.42910\n89.89789\n\n\n\n\n\nLa tabla permite revisar:\n\nCantidad de años con datos disponibles.\nPrimer año observado.\nÚltimo año observado.\nValor inicial de la serie.\nValor final de la serie.\nVariación absoluta entre el valor inicial y final.\nPromedio del periodo observado.\nValor mínimo.\nValor máximo.\n\nEsta salida permite comparar rápidamente la evolución de cada país dentro de los indicadores seleccionados."
+  },
+  {
+    "objectID": "index.html#visualización-estática",
+    "href": "index.html#visualización-estática",
+    "title": "Indicadores Doing Business en países del Cono Sur",
+    "section": "4 Visualización estática",
+    "text": "4 Visualización estática\nLa siguiente imagen corresponde al gráfico estático generado por el proyecto.\n\n\n\n\n\nEvolución de indicadores Doing Business seleccionados para Chile, Argentina y Uruguay.\n\n\n\n\nEl gráfico presenta dos indicadores con unidades distintas. Por esa razón, las visualizaciones se muestran separadas.\nEl primer gráfico muestra el indicador Dealing with construction permits: Time (days), medido en días. En este indicador, valores más bajos representan una menor cantidad de tiempo requerido para completar los procedimientos asociados a permisos de construcción.\nEl segundo gráfico muestra el indicador Starting a business - Score, medido como puntaje. En este indicador, valores más altos representan una mejor posición dentro de la medición de facilidad para iniciar un negocio."
+  },
+  {
+    "objectID": "index.html#lectura-descriptiva",
+    "href": "index.html#lectura-descriptiva",
+    "title": "Indicadores Doing Business en países del Cono Sur",
+    "section": "5 Lectura descriptiva",
+    "text": "5 Lectura descriptiva\nLa tabla y el gráfico permiten observar la evolución de los indicadores seleccionados para Chile, Argentina y Uruguay entre 2003 y 2019.\nEn el indicador de permisos de construcción, la lectura se centra en la cantidad de días requeridos. Esto permite comparar diferencias entre países y observar si las series presentan estabilidad, reducción o aumento durante el periodo disponible.\nEn el indicador de facilidad para iniciar un negocio, la lectura se centra en el puntaje. Esto permite observar la trayectoria de cada país y comparar los cambios relativos entre el primer y último año disponible.\nA partir de ambos productos, el análisis descriptivo permite revisar:\n\nLa dirección de cambio de cada país.\nLa magnitud de la variación entre el primer y último año observado.\nLa distancia relativa entre Chile, Argentina y Uruguay.\nLa estabilidad o variación de cada serie.\nLas diferencias de cobertura temporal entre indicadores.\n\nEste informe no interpreta los cambios como efectos causales. Su función es presentar resultados descriptivos a partir de los datos procesados."
+  },
+  {
+    "objectID": "index.html#relación-con-el-dashboard",
+    "href": "index.html#relación-con-el-dashboard",
+    "title": "Indicadores Doing Business en países del Cono Sur",
+    "section": "6 Relación con el dashboard",
+    "text": "6 Relación con el dashboard\nEl dashboard interactivo permite explorar los mismos indicadores mediante filtros de país, rango de años y visualización de valores.\n\n\n\n\n\n\n\n\n\nProducto\nFuncion\n\n\n\n\nInforme\nPresenta una lectura fija y resumida de la tabla y la visualización principal.\n\n\nDashboard\nPermite explorar dinámicamente países, años e indicadores seleccionados.\n\n\n\n\n\nEl dashboard complementa este informe porque permite modificar el rango temporal, seleccionar países específicos y revisar los valores de forma interactiva.\nDisponible en:\nhttps://dbigggg.shinyapps.io/proyecto-banco-mundial-dashboard/"
+  },
+  {
+    "objectID": "index.html#alcance-del-análisis",
+    "href": "index.html#alcance-del-análisis",
+    "title": "Indicadores Doing Business en países del Cono Sur",
+    "section": "7 Alcance del análisis",
+    "text": "7 Alcance del análisis\nEste informe tiene un alcance descriptivo y de portafolio. Su objetivo es mostrar los productos principales del proyecto y entregar una lectura clara de sus resultados.\nEl análisis no busca explicar causalmente los cambios observados. Para avanzar hacia una explicación de ese tipo sería necesario incorporar más indicadores, variables adicionales y una estrategia metodológica orientada a inferencia.\nEl valor principal del proyecto está en integrar un flujo de trabajo reproducible en R:\n\nCarga de datos.\nLimpieza y transformación.\nSelección de países e indicadores.\nConstrucción de tabla resumen.\nGeneración de visualización estática.\nExportación de objetos para dashboard.\nPublicación de productos en formato web."
+  },
+  {
+    "objectID": "index.html#cierre",
+    "href": "index.html#cierre",
+    "title": "Indicadores Doing Business en países del Cono Sur",
+    "section": "8 Cierre",
+    "text": "8 Cierre\nEste informe documenta los productos principales del proyecto y entrega una lectura descriptiva de sus salidas. La combinación entre tabla resumen, gráfico estático y dashboard interactivo permite presentar el análisis de forma clara, reproducible y orientada a portafolio.\nRepositorio del proyecto:\nhttps://github.com/SanDBIG/Proyecto-Banco-Mundial"
+  }
+]
