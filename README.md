@@ -13,7 +13,7 @@ El proyecto cuenta con dos accesos principales: un dashboard interactivo actualm
 | Recurso               | Descripción                                                                 | Estado        | Enlace                                                                            |
 | --------------------- | --------------------------------------------------------------------------- | ------------- | --------------------------------------------------------------------------------- |
 | Dashboard interactivo | Aplicación en Shiny para explorar países, años e indicadores seleccionados. | Disponible    | [Abrir dashboard](https://diturrietag.shinyapps.io/proyecto-banco-mundial-dashboard/) |
-| Informe web           | Informe reproducible del proyecto, publicado mediante GitHub Pages.         | Disponible | [Ver informe](https://sandbig.github.io/Proyecto-Banco-Mundial/)                  |
+| Informe web           | Informe reproducible del proyecto, publicado mediante GitHub Pages.         | Disponible | [Ver informe](https://diturrietag.github.io/Proyecto-Banco-Mundial/)                  |
 
 
 
