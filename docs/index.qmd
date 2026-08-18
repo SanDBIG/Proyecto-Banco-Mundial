@@ -62,8 +62,6 @@ archivos_utilizados <- tribble(
 kable(archivos_utilizados)
 ```
 
-Como este archivo `index.qmd` se encuentra dentro de la carpeta `docs/`, las rutas usadas en el código suben un nivel hacia la raíz del proyecto mediante `../`.
-
 ## Tabla resumen
 
 La siguiente tabla corresponde al archivo `tabla_conosur_resumen.csv`. Esta salida resume cada combinación entre país e indicador mediante medidas descriptivas básicas.
@@ -155,7 +153,7 @@ El dashboard complementa este informe porque permite modificar el rango temporal
 
 Disponible en:
 
-<https://dbigggg.shinyapps.io/proyecto-banco-mundial-dashboard/>
+<https://diturrietag.shinyapps.io/proyecto-banco-mundial-dashboard/>
 
 ## Alcance del análisis
 
@@ -179,4 +177,4 @@ Este informe documenta los productos principales del proyecto y entrega una lect
 
 Repositorio del proyecto:
 
-<https://github.com/SanDBIG/Proyecto-Banco-Mundial>
+<https://github.com/diturrietag/Proyecto-Banco-Mundial>

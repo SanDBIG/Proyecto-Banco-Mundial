@@ -18,7 +18,7 @@
     "href": "index.html#archivos-utilizados",
     "title": "Indicadores Doing Business en países del Cono Sur",
     "section": "2 Archivos utilizados",
-    "text": "2 Archivos utilizados\nEl informe utiliza dos archivos generados por el flujo de procesamiento del proyecto:\n\n\n\n\n\n\n\n\n\n\nArchivo\nRuta_en_el_proyecto\nUso\n\n\n\n\ntabla_conosur_resumen.csv\n03_outputs/01_tables/tabla_conosur_resumen.csv\nTabla descriptiva con valores iniciales, finales, variaciones y estadísticos básicos.\n\n\ngrafico_conosur_serie_temporal.png\n03_outputs/02_figures/grafico_conosur_serie_temporal.png\nVisualización estática de los indicadores seleccionados.\n\n\n\n\n\nComo este archivo index.qmd se encuentra dentro de la carpeta docs/, las rutas usadas en el código suben un nivel hacia la raíz del proyecto mediante ../."
+    "text": "2 Archivos utilizados\nEl informe utiliza dos archivos generados por el flujo de procesamiento del proyecto:\n\n\n\n\n\n\n\n\n\n\nArchivo\nRuta_en_el_proyecto\nUso\n\n\n\n\ntabla_conosur_resumen.csv\n03_outputs/01_tables/tabla_conosur_resumen.csv\nTabla descriptiva con valores iniciales, finales, variaciones y estadísticos básicos.\n\n\ngrafico_conosur_serie_temporal.png\n03_outputs/02_figures/grafico_conosur_serie_temporal.png\nVisualización estática de los indicadores seleccionados."
   },
   {
     "objectID": "index.html#tabla-resumen",
@@ -46,7 +46,7 @@
     "href": "index.html#relación-con-el-dashboard",
     "title": "Indicadores Doing Business en países del Cono Sur",
     "section": "6 Relación con el dashboard",
-    "text": "6 Relación con el dashboard\nEl dashboard interactivo permite explorar los mismos indicadores mediante filtros de país, rango de años y visualización de valores.\n\n\n\n\n\n\n\n\n\nProducto\nFuncion\n\n\n\n\nInforme\nPresenta una lectura fija y resumida de la tabla y la visualización principal.\n\n\nDashboard\nPermite explorar dinámicamente países, años e indicadores seleccionados.\n\n\n\n\n\nEl dashboard complementa este informe porque permite modificar el rango temporal, seleccionar países específicos y revisar los valores de forma interactiva.\nDisponible en:\nhttps://dbigggg.shinyapps.io/proyecto-banco-mundial-dashboard/"
+    "text": "6 Relación con el dashboard\nEl dashboard interactivo permite explorar los mismos indicadores mediante filtros de país, rango de años y visualización de valores.\n\n\n\n\n\n\n\n\n\nProducto\nFuncion\n\n\n\n\nInforme\nPresenta una lectura fija y resumida de la tabla y la visualización principal.\n\n\nDashboard\nPermite explorar dinámicamente países, años e indicadores seleccionados.\n\n\n\n\n\nEl dashboard complementa este informe porque permite modificar el rango temporal, seleccionar países específicos y revisar los valores de forma interactiva.\nDisponible en:\nhttps://diturrietag.shinyapps.io/proyecto-banco-mundial-dashboard/"
   },
   {
     "objectID": "index.html#alcance-del-análisis",
@@ -60,6 +60,6 @@
     "href": "index.html#cierre",
     "title": "Indicadores Doing Business en países del Cono Sur",
     "section": "8 Cierre",
-    "text": "8 Cierre\nEste informe documenta los productos principales del proyecto y entrega una lectura descriptiva de sus salidas. La combinación entre tabla resumen, gráfico estático y dashboard interactivo permite presentar el análisis de forma clara, reproducible y orientada a portafolio.\nRepositorio del proyecto:\nhttps://github.com/SanDBIG/Proyecto-Banco-Mundial"
+    "text": "8 Cierre\nEste informe documenta los productos principales del proyecto y entrega una lectura descriptiva de sus salidas. La combinación entre tabla resumen, gráfico estático y dashboard interactivo permite presentar el análisis de forma clara, reproducible y orientada a portafolio.\nRepositorio del proyecto:\nhttps://github.com/diturrietag/Proyecto-Banco-Mundial"
   }
 ]
